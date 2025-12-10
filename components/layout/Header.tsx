@@ -1,12 +1,62 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig, navigation } from "@/config/site";
+import { siteConfig, navigation, zones, services } from "@/config/site";
+
+// Map des services pour identifier les slugs de service dans l'URL
+const servicesSlugs = services.map(s => s.slug);
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Détecter le slug de zone depuis l'URL pour maintenir le contexte de navigation
+  // Patterns : /zones/[zone] ou /[service]/[zone]
+  const getZoneSlugFromPath = (): string | null => {
+    const segments = pathname.split('/').filter(Boolean);
+    
+    // Pattern: /zones/[zone]
+    if (segments[0] === 'zones' && segments[1]) {
+      const zone = zones.find(z => z.slug === segments[1]);
+      if (zone && !zone.isMain) return zone.slug;
+    }
+    
+    // Pattern: /[service]/[zone]
+    if (segments.length >= 2 && servicesSlugs.includes(segments[0])) {
+      const zone = zones.find(z => z.slug === segments[1]);
+      if (zone && !zone.isMain) return zone.slug;
+    }
+    
+    return null;
+  };
+
+  const currentZoneSlug = getZoneSlugFromPath();
+
+  // Adapter l'URL d'un lien de navigation en fonction de la zone actuelle
+  const getNavHref = (href: string): string => {
+    if (!currentZoneSlug) return href;
+    
+    // Adapter les liens de services pour inclure la zone
+    // /depannage -> /depannage/saint-malo
+    // /installation -> /installation/saint-malo (si c'est un service)
+    const path = href.replace(/^\//, '');
+    
+    // Vérifier si c'est un lien de service
+    const service = services.find(s => s.slug === path);
+    if (service && service.hasPage) {
+      return `/${service.slug}/${currentZoneSlug}`;
+    }
+    
+    // Pour les pages zones, rediriger vers la zone actuelle
+    if (path === 'zones') {
+      return `/zones/${currentZoneSlug}`;
+    }
+    
+    return href;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -31,7 +81,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={getNavHref(item.href)}
                 className="text-gray-600 hover:text-primary-600 font-medium transition-colors"
               >
                 {item.label}
@@ -77,7 +127,7 @@ export function Header() {
               {navigation.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={getNavHref(item.href)}
                   onClick={() => setIsMenuOpen(false)}
                   className="px-4 py-3 text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
                 >
