@@ -5,14 +5,21 @@ interface ServicesProps {
   title?: string;
   subtitle?: string;
   showAll?: boolean;
+  zoneSlug?: string; // Slug de la zone actuelle pour le maillage interne
 }
 
 export function Services({
   title = "Nos Services",
   subtitle,
   showAll = true,
+  zoneSlug,
 }: ServicesProps) {
   const defaultSubtitle = `${siteConfig.name} propose une gamme complète de services de serrurerie à ${siteConfig.city} et ses environs.`;
+
+  // Générer l'URL du service : avec zone si fournie, sinon vers la page service principale
+  const getServiceUrl = (serviceSlug: string) => {
+    return zoneSlug ? `/${serviceSlug}/${zoneSlug}` : `/${serviceSlug}`;
+  };
 
   return (
     <section className="section bg-white">
@@ -30,7 +37,7 @@ export function Services({
           {services.map((service) => (
             <Link
               key={service.id}
-              href={`/${service.slug}`}
+              href={getServiceUrl(service.slug)}
               className="card group hover:border-primary-200"
             >
               <div className="flex items-start gap-4">

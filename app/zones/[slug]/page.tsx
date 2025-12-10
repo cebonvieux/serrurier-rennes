@@ -56,10 +56,11 @@ export default function ZonePage({ params }: Props) {
         subtitle={`Intervention rapide en 30 minutes à ${zone.name} (${zone.postalCode}). Dépannage, ouverture de porte, changement de serrure. Disponible 24h/24.`}
       />
 
-      {/* Services */}
+      {/* Services avec liens vers la zone */}
       <Services
         title={`Nos services à ${zone.name}`}
         subtitle={`${siteConfig.name} intervient à ${zone.name} pour tous vos besoins en serrurerie.`}
+        zoneSlug={zone.slug}
       />
 
       {/* Contenu SEO */}
