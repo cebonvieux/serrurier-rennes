@@ -64,22 +64,22 @@ Logo de l'entreprise en différents formats.
 
 | Fichier | Dimensions | Utilisation |
 |---------|------------|-------------|
-| `logo.svg` | vectoriel | Logo principal (header) |
-| `logo-white.svg` | vectoriel | Logo blanc (footer sombre) |
-| `logo-icon.svg` | vectoriel | Icône seule |
+| `logo.png` | 400×100 | Logo principal (header) |
+| `logo-white.png` | 400×100 | Logo blanc (footer sombre) |
+| `logo-icon.png` | 100×100 | Icône seule |
 | `favicon.ico` | 32×32 | Favicon navigateur |
 | `apple-touch-icon.png` | 180×180 | Icône iOS |
 | `og-image.jpg` | 1200×630 | Image partage réseaux sociaux |
 
 ### `/icons/` - Icônes personnalisées
-Icônes SVG personnalisées (si non utilisation d'emojis).
+Icônes PNG personnalisées (si non utilisation d'emojis).
 
-| Fichier | Format | Utilisation |
-|---------|--------|-------------|
-| `icon-phone.svg` | SVG | Icône téléphone |
-| `icon-clock.svg` | SVG | Icône horaires |
-| `icon-location.svg` | SVG | Icône localisation |
-| `icon-check.svg` | SVG | Icône validation |
+| Fichier | Dimensions | Utilisation |
+|---------|------------|-------------|
+| `icon-phone.png` | 64×64 | Icône téléphone |
+| `icon-clock.png` | 64×64 | Icône horaires |
+| `icon-location.png` | 64×64 | Icône localisation |
+| `icon-check.png` | 64×64 | Icône validation |
 
 ### `/gallery/` - Galerie de réalisations
 Photos de chantiers et réalisations.
@@ -95,7 +95,7 @@ Images de fond pour les sections.
 
 | Fichier | Dimensions | Utilisation |
 |---------|------------|-------------|
-| `pattern.svg` | vectoriel | Motif répétable |
+| `pattern.png` | 200×200 | Motif répétable |
 | `texture.webp` | 1920×1080 | Texture de fond |
 | `gradient.webp` | 1920×1080 | Dégradé personnalisé |
 
@@ -103,8 +103,8 @@ Images de fond pour les sections.
 
 ### Format
 - **WebP** : Format recommandé (meilleure compression)
-- **SVG** : Pour les logos et icônes
-- **JPG** : Alternative si WebP non supporté
+- **PNG** : Pour les logos et icônes (fond transparent)
+- **JPG** : Pour les photos sans transparence
 
 ### Optimisation
 - Compresser les images avant upload
@@ -127,7 +127,7 @@ Pour remplacer une image :
 
 Ces images doivent être présentes pour éviter les erreurs :
 
-- [ ] `logos/logo.svg` - Logo principal
+- [ ] `logos/logo.png` - Logo principal
 - [ ] `hero/hero-home.webp` - Bannière accueil
 - [ ] `logos/og-image.jpg` - Image réseaux sociaux
 
