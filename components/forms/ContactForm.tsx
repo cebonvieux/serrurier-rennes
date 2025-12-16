@@ -3,7 +3,7 @@
 import { useState, FormEvent } from "react";
 import { siteConfig } from "@/config/site";
 
-const WEBHOOK_URL = "https://lioai.app.n8n.cloud/webhook-test/drm-contact";
+const WEBHOOK_URL = "https://lioai.app.n8n.cloud/webhook/drm-contact";
 
 interface FormData {
   nom: string;
