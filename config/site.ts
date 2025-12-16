@@ -8,31 +8,44 @@ export const siteConfig = {
   // ─────────────────────────────────────────────────────────────────────────
   // INFORMATIONS ENTREPRISE
   // ─────────────────────────────────────────────────────────────────────────
-  name: "SL59",                              // Nom court / marque
-  fullName: "Serrurier Lille 59",            // Nom complet
-  domain: "serrurier-lille-59.fr",           // Domaine sans https://
+  name: "SR35",                              // Nom court / marque
+  fullName: "Serrurier Rennes 35",           // Nom complet
+  domain: "serrurier-rennes35.fr",           // Domaine sans https://
   
   // ─────────────────────────────────────────────────────────────────────────
   // CONTACT
   // ─────────────────────────────────────────────────────────────────────────
-  phone: "03 74 09 51 31",                   // Téléphone affiché
-  phoneLink: "tel:+33374095131",             // Lien téléphone (format international)
-  email: "contact@serrurier-lille-59.fr",
+  phone: "02 30 96 40 53",                   // Téléphone affiché
+  phoneLink: "tel:+33230964053",             // Lien téléphone (format international)
+  email: "contact@serrurier-rennes35.fr",
+  
+  // ─────────────────────────────────────────────────────────────────────────
+  // INFORMATIONS LÉGALES
+  // ─────────────────────────────────────────────────────────────────────────
+  legalName: "DRM",                              // Raison sociale
+  legalAddress: "122 rue Amelot, 75011 Paris",   // Adresse du siège
+  siret: "98942786900015",
+  rcs: "989 427 869 R.C.S. Paris",
+  host: {
+    name: "OVH",
+    address: "2 rue Kellermann, 59100 Roubaix, France",
+    website: "https://www.ovhcloud.com",
+  },
   
   // ─────────────────────────────────────────────────────────────────────────
   // LOCALISATION
   // ─────────────────────────────────────────────────────────────────────────
-  city: "Lille",
-  postalCode: "59000",
-  department: "Nord",
-  departmentCode: "59",
-  region: "Hauts-de-France",
-  address: "59000 Lille, France",
+  city: "Rennes",
+  postalCode: "35000",
+  department: "Ille-et-Vilaine",
+  departmentCode: "35",
+  region: "Bretagne",
+  address: "35000 Rennes, France",
   
   // Coordonnées GPS (pour Google Maps et Schema.org)
   geo: {
-    lat: 50.6365654,
-    lng: 3.0635282,
+    lat: 48.1173,
+    lng: -1.6778,
   },
   
   // ─────────────────────────────────────────────────────────────────────────
@@ -45,9 +58,9 @@ export const siteConfig = {
   // RÉSEAUX SOCIAUX
   // ─────────────────────────────────────────────────────────────────────────
   social: {
-    facebook: "https://facebook.com/sl59.serrurier.lille",
-    instagram: "https://instagram.com/sl59.serrurier",
-    google: "https://g.page/serrurier-lille-59", // Page Google Business
+    facebook: "https://facebook.com/sr35.serrurier.rennes",
+    instagram: "https://instagram.com/sr35.serrurier",
+    google: "https://g.page/serrurier-rennes-35", // Page Google Business
   },
   
   // ─────────────────────────────────────────────────────────────────────────
@@ -56,7 +69,7 @@ export const siteConfig = {
   reviews: {
     rating: 4.9,
     count: 127,
-    googleUrl: "https://g.page/serrurier-lille-59/review",
+    googleUrl: "https://g.page/serrurier-rennes-35/review",
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -84,23 +97,52 @@ export const siteConfig = {
 // Liste des villes/communes desservies
 // ─────────────────────────────────────────────────────────────────────────
 export const zones = [
-  { name: "Lille", slug: "lille", postalCode: "59000", isMain: true },
-  { name: "La Madeleine", slug: "la-madeleine", postalCode: "59110" },
-  { name: "Lambersart", slug: "lambersart", postalCode: "59130" },
-  { name: "Marcq-en-Barœul", slug: "marcq-en-baroeul", postalCode: "59700" },
-  { name: "Mons-en-Barœul", slug: "mons-en-baroeul", postalCode: "59370" },
-  { name: "Hellemmes", slug: "hellemmes", postalCode: "59260" },
-  { name: "Villeneuve-d'Ascq", slug: "villeneuve-d-ascq", postalCode: "59650" },
-  { name: "Loos", slug: "loos", postalCode: "59120" },
-  { name: "Wattignies", slug: "wattignies", postalCode: "59139" },
-  { name: "Faches-Thumesnil", slug: "faches-thumesnil", postalCode: "59155" },
-  { name: "Ronchin", slug: "ronchin", postalCode: "59790" },
-  { name: "Roubaix", slug: "roubaix", postalCode: "59100" },
-  { name: "Tourcoing", slug: "tourcoing", postalCode: "59200" },
-  { name: "Croix", slug: "croix", postalCode: "59170" },
-  { name: "Wasquehal", slug: "wasquehal", postalCode: "59290" },
-  { name: "Mouvaux", slug: "mouvaux", postalCode: "59420" },
-  { name: "Bondues", slug: "bondues", postalCode: "59910" },
+  { name: "Rennes", slug: "rennes", postalCode: "35000", isMain: true },
+  { name: "Cesson-Sévigné", slug: "cesson-sevigne", postalCode: "35510" },
+  { name: "Saint-Grégoire", slug: "saint-gregoire", postalCode: "35760" },
+  { name: "Betton", slug: "betton", postalCode: "35830" },
+  { name: "Pacé", slug: "pace", postalCode: "35740" },
+  { name: "Chantepie", slug: "chantepie", postalCode: "35135" },
+  { name: "Bruz", slug: "bruz", postalCode: "35170" },
+  { name: "Chartres-de-Bretagne", slug: "chartres-de-bretagne", postalCode: "35131" },
+  { name: "Saint-Jacques-de-la-Lande", slug: "saint-jacques-de-la-lande", postalCode: "35136" },
+  { name: "Le Rheu", slug: "le-rheu", postalCode: "35650" },
+  { name: "Vezin-le-Coquet", slug: "vezin-le-coquet", postalCode: "35132" },
+  { name: "Mordelles", slug: "mordelles", postalCode: "35310" },
+  { name: "Noyal-Châtillon-sur-Seiche", slug: "noyal-chatillon-sur-seiche", postalCode: "35230" },
+  { name: "Vern-sur-Seiche", slug: "vern-sur-seiche", postalCode: "35770" },
+  { name: "Thorigné-Fouillard", slug: "thorigne-fouillard", postalCode: "35235" },
+  { name: "Acigné", slug: "acigne", postalCode: "35690" },
+  { name: "Montgermont", slug: "montgermont", postalCode: "35760" },
+  { name: "La Chapelle-des-Fougeretz", slug: "la-chapelle-des-fougeretz", postalCode: "35520" },
+  { name: "Pont-Péan", slug: "pont-pean", postalCode: "35131" },
+  { name: "Gévezé", slug: "geveze", postalCode: "35850" },
+  // Communes élargies
+  { name: "Liffré", slug: "liffre", postalCode: "35340" },
+  { name: "Melesse", slug: "melesse", postalCode: "35520" },
+  { name: "Saint-Médard-sur-Ille", slug: "saint-medard-sur-ille", postalCode: "35250" },
+  { name: "Clayes", slug: "clayes", postalCode: "35590" },
+  { name: "L'Hermitage", slug: "l-hermitage", postalCode: "35590" },
+  { name: "Bréal-sous-Montfort", slug: "breal-sous-montfort", postalCode: "35310" },
+  { name: "Chavagne", slug: "chavagne", postalCode: "35310" },
+  { name: "Orgères", slug: "orgeres", postalCode: "35230" },
+  { name: "Bourgbarré", slug: "bourgbarre", postalCode: "35230" },
+  { name: "Corps-Nuds", slug: "corps-nuds", postalCode: "35150" },
+  { name: "Janzé", slug: "janze", postalCode: "35150" },
+  { name: "Domloup", slug: "domloup", postalCode: "35410" },
+  { name: "Nouvoitou", slug: "nouvoitou", postalCode: "35410" },
+  { name: "Servon-sur-Vilaine", slug: "servon-sur-vilaine", postalCode: "35530" },
+  { name: "Noyal-sur-Vilaine", slug: "noyal-sur-vilaine", postalCode: "35530" },
+  { name: "Châteaugiron", slug: "chateaugiron", postalCode: "35410" },
+  { name: "Vitré", slug: "vitre", postalCode: "35500" },
+  { name: "Fougères", slug: "fougeres", postalCode: "35300" },
+  { name: "Saint-Malo", slug: "saint-malo", postalCode: "35400" },
+  { name: "Dinard", slug: "dinard", postalCode: "35800" },
+  { name: "Combourg", slug: "combourg", postalCode: "35270" },
+  { name: "Redon", slug: "redon", postalCode: "35600" },
+  { name: "Guichen", slug: "guichen", postalCode: "35580" },
+  { name: "Bain-de-Bretagne", slug: "bain-de-bretagne", postalCode: "35470" },
+  { name: "Montfort-sur-Meu", slug: "montfort-sur-meu", postalCode: "35160" },
 ] as const;
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -112,6 +154,7 @@ export const navigation = [
   { label: "Installation", href: "/installation" },
   { label: "Tarifs", href: "/tarifs" },
   { label: "Zones", href: "/zones" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -127,6 +170,7 @@ export const services = [
     longDesc: "Service de dépannage serrurerie en urgence, disponible 24h/24 et 7j/7.",
     icon: "🔓",
     hasPage: true, // A sa propre page /depannage et des pages localisées
+    bgImage: "/images/backgrounds/depannage-serrurerie-rennes-35-urgence.webp",
   },
   {
     id: "ouverture-porte",
@@ -136,6 +180,7 @@ export const services = [
     longDesc: "Ouverture de porte claquée, bloquée ou suite à perte de clés. Sans dégât.",
     icon: "🚪",
     hasPage: true,
+    bgImage: "/images/services/ouverture-de-porte-rennes-35.webp",
   },
   {
     id: "changement-serrure",
@@ -145,15 +190,18 @@ export const services = [
     longDesc: "Remplacement de serrure usée, cassée ou pour renforcer la sécurité.",
     icon: "🔐",
     hasPage: true,
+    bgImage: "/images/services/changement-de-serrure-rennes-35.webp",
   },
   {
-    id: "installation",
-    slug: "installation-serrure",
-    name: "Installation Serrure",
-    shortDesc: "Pose de serrures sécurisées",
-    longDesc: "Installation de serrures neuves, multipoints, certifiées A2P.",
-    icon: "🛠️",
-    hasPage: true,
+    id: "rideaux-metalliques",
+    slug: "depannage-rideaux-metalliques",
+    name: "Dépannage Rideaux Métalliques",
+    shortDesc: "Réparation et déblocage",
+    longDesc: "Dépannage, réparation et déblocage de rideaux métalliques pour commerces et locaux professionnels.",
+    icon: "🏪",
+    hasPage: false, // Redirige vers le site partenaire DRM
+    externalUrl: "https://depannage-rideau-metallique-rennes.fr",
+    bgImage: "/images/services/depannage-rideau-metallique-rennes-35.webp",
   },
   {
     id: "blindage",
@@ -163,6 +211,7 @@ export const services = [
     longDesc: "Blindage de porte existante pour une protection anti-effraction maximale.",
     icon: "🛡️",
     hasPage: true,
+    bgImage: "/images/services/blindage-de-porte-rennes-35.webp",
   },
   {
     id: "cylindre",
@@ -172,6 +221,7 @@ export const services = [
     longDesc: "Remplacement de cylindre par des modèles haute sécurité anti-crochetage.",
     icon: "🔑",
     hasPage: true,
+    bgImage: "/images/services/changement-de-cylindre-serrurerie-rennes-35.webp",
   },
 ] as const;
 

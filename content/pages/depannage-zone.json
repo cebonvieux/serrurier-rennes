@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "🚨 Dépannage Urgence {zone}",
+    "title": "Dépannage Serrurier {zone}",
+    "subtitle": "Bloqué devant votre porte ? Serrure cassée ? Victime d'effraction ? Nos serruriers interviennent en 30 minutes à {zone}, de jour comme de nuit."
+  },
+  "stats": [
+    { "value": "30", "label": "min sur place" },
+    { "value": "24/7", "label": "Jours et nuits" },
+    { "value": "0€", "label": "Devis offert" }
+  ],
+  "interventions": [
+    {
+      "icon": "🚪",
+      "title": "Porte claquée",
+      "description": "Ouverture rapide et sans casse de votre porte claquée. Méthode douce préservant serrure et huisserie.",
+      "image": "/images/services/ouverture-de-porte-rennes-35.webp"
+    },
+    {
+      "icon": "🔐",
+      "title": "Serrure défaillante",
+      "description": "Réparation ou remplacement de votre serrure bloquée. Diagnostic précis et solution adaptée.",
+      "image": "/images/services/changement-de-serrure-rennes-35.webp"
+    },
+    {
+      "icon": "🔓",
+      "title": "Perte de clés",
+      "description": "Ouverture immédiate puis remplacement du cylindre pour garantir votre sécurité.",
+      "image": "/images/services/perte-de-clés-rennes-35.webp"
+    },
+    {
+      "icon": "🛡️",
+      "title": "Suite à effraction",
+      "description": "Sécurisation d'urgence après cambriolage. Remplacement de serrure et renforcement de porte.",
+      "image": "/images/services/réparation-porte-effraction-rennes-35.webp"
+    },
+    {
+      "icon": "🔑",
+      "title": "Clé brisée",
+      "description": "Extraction de la clé cassée dans le cylindre. Vérification et remplacement si nécessaire.",
+      "image": "/images/services/clé-cassée-rennes-35.webp"
+    },
+    {
+      "icon": "🏠",
+      "title": "Porte blindée",
+      "description": "Intervention sur portes blindées toutes marques. Fichet, Picard, Tordjman, Bricard...",
+      "image": "/images/services/blindage-de-porte-rennes-35.webp"
+    }
+  ],
+  "cta": {
+    "title": "Urgence serrurerie à {zone} ?",
+    "subtitle": "Nos artisans interviennent en 30 minutes, 24h/24, à {zone} et ses environs"
+  }
+}
+

@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "badge": "🔧 Expertise Serrurerie",
+    "title": "Services de Serrurerie à {city}",
+    "subtitle": "Découvrez l'ensemble de nos prestations de serrurerie. Dépannage, installation, remplacement : une réponse professionnelle adaptée à chaque situation."
+  },
+  "intro": {
+    "title": "Tous nos services de serrurerie en Bretagne",
+    "description": "{name} est votre artisan serrurier de confiance pour tous vos besoins en serrurerie à {city} et dans le {department}. De l'urgence à l'installation sur-mesure, nous maîtrisons l'ensemble des techniques modernes de serrurerie."
+  },
+  "serviceDetails": [
+    {
+      "icon": "🔓",
+      "title": "Dépannage Urgence 24h/24",
+      "description": "Porte claquée, clé cassée, serrure bloquée ? Notre équipe intervient en 30 minutes à {city} et ses environs. Disponibles jour et nuit, week-ends et jours fériés, nous assurons une prise en charge immédiate de votre situation.",
+      "features": ["Arrivée en 30 min", "Ouverture sans dégât", "Intervention 24h/24"],
+      "link": "/depannage"
+    },
+    {
+      "icon": "🚪",
+      "title": "Ouverture de Porte",
+      "description": "Spécialistes de l'ouverture de porte, nous utilisons des techniques non destructives pour préserver votre serrure et votre huisserie. Que vous soyez bloqué dehors ou victime d'un problème mécanique, nous intervenons rapidement.",
+      "features": ["Technique non destructive", "Toutes marques", "Devis sur place"],
+      "link": "/ouverture-de-porte"
+    },
+    {
+      "icon": "🔐",
+      "title": "Changement de Serrure",
+      "description": "Vous souhaitez remplacer une serrure vétuste, endommagée ou renforcer votre sécurité ? Nous installons des serrures de toutes les grandes marques (Vachette, Fichet, Bricard, Picard) adaptées à votre niveau de protection souhaité.",
+      "features": ["Serrures certifiées A2P", "Garantie fabricant", "Conseil personnalisé"],
+      "link": "/changement-serrure"
+    },
+    {
+      "icon": "🏪",
+      "title": "Dépannage Rideaux Métalliques",
+      "description": "Votre rideau métallique est bloqué, grippé ou endommagé ? Notre partenaire DRM assure le dépannage et la réparation de tous types de rideaux métalliques pour commerces, garages et locaux professionnels à {city}.",
+      "features": ["Déblocage rapide", "Motorisation", "Intervention 24h/24"],
+      "link": "https://depannage-rideau-metallique-rennes.fr",
+      "external": true
+    },
+    {
+      "icon": "🛡️",
+      "title": "Blindage de Porte",
+      "description": "Renforcez la sécurité de votre logement grâce au blindage de porte. Nous installons des blindages sur-mesure, conservant l'esthétique de votre porte tout en la rendant résistante aux tentatives d'effraction.",
+      "features": ["Blindage sur-mesure", "Certification A2P", "Esthétique préservée"],
+      "link": "/blindage-porte"
+    },
+    {
+      "icon": "🔑",
+      "title": "Remplacement Cylindre",
+      "description": "Le cylindre est le cœur de votre serrure. Nous remplaçons votre cylindre par des modèles haute sécurité anti-crochetage, anti-perçage et anti-bumping. Solution efficace pour sécuriser votre entrée rapidement.",
+      "features": ["Cylindres haute sécurité", "Installation rapide", "Tarif compétitif"],
+      "link": "/remplacement-cylindre"
+    }
+  ],
+  "guarantees": {
+    "title": "Nos engagements qualité",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Réactivité",
+        "description": "Intervention en 30 minutes sur {city} et l'ensemble de la métropole rennaise."
+      },
+      {
+        "icon": "🏅",
+        "title": "Expertise",
+        "description": "Artisans serruriers qualifiés avec plus de 10 ans d'expérience terrain."
+      },
+      {
+        "icon": "💰",
+        "title": "Transparence",
+        "description": "Devis gratuit et détaillé avant chaque intervention. Aucun frais caché."
+      },
+      {
+        "icon": "✅",
+        "title": "Garantie",
+        "description": "Toutes nos interventions sont garanties. Pièces et main d'œuvre assurées."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Besoin d'un serrurier à {city} ?",
+    "subtitle": "Contactez-nous pour un devis gratuit ou une intervention rapide. Notre équipe est disponible 24h/24."
+  }
+}
+

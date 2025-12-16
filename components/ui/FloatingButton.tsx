@@ -7,11 +7,10 @@ export function FloatingButton() {
     <a
       href={siteConfig.phoneLink}
       className="fixed bottom-6 right-6 z-50 flex items-center gap-2 
-                 bg-green-600 text-white px-5 py-3 rounded-full 
-                 shadow-lg shadow-green-600/40 
-                 hover:bg-green-700 hover:scale-105
-                 transition-all duration-200
-                 animate-pulse hover:animate-none"
+                 bg-accent-500 text-white px-5 py-3 rounded-lg 
+                 shadow-lg shadow-accent-600/40 
+                 hover:bg-accent-600 hover:scale-105
+                 transition-all duration-200"
       aria-label={`Appeler le ${siteConfig.phone}`}
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

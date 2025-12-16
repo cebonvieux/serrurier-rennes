@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, zones } from "@/config/site";
+import { getPageContent } from "@/lib/content";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import faqData from "@/content/faq.json";
 
 interface Props {
@@ -42,13 +44,20 @@ export default function ZonePage({ params }: Props) {
   }
 
   // Adapter les FAQ pour la zone
-  const zoneFaq = faqData.map(item => ({
-    ...item,
-    answer: item.answer.replace(/Lille/g, zone.name),
-  }));
+  const zoneFaq = getPageContent(faqData, {
+    zone: zone.name,
+    zoneSlug: zone.slug,
+    zonePostal: zone.postalCode,
+  });
 
   return (
-    <main>
+    <main className="pt-20">
+      {/* Fil d'Ariane */}
+      <Breadcrumb items={[
+        { label: "Zones", href: "/zones" },
+        { label: zone.name }
+      ]} />
+
       {/* Hero adapté à la zone */}
       <Hero
         badge={`📍 Serrurier ${zone.name}`}
@@ -82,7 +91,7 @@ export default function ZonePage({ params }: Props) {
             <ul>
               <li><strong>Intervention en 30 minutes</strong> sur {zone.name}</li>
               <li><strong>Disponible 24h/24</strong>, y compris week-ends et jours fériés</li>
-              <li><strong>Devis gratuit</strong> communiqué par téléphone</li>
+              <li><strong>Devis gratuit</strong> communiqué avant intervention</li>
               <li><strong>Prix transparents</strong>, pas de mauvaise surprise</li>
               <li><strong>Artisans qualifiés</strong> avec plus de 10 ans d&apos;expérience</li>
             </ul>

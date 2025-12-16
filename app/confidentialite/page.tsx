@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
 export default function ConfidentialitePage() {
   return (
     <main className="pt-20">
+      {/* Fil d'Ariane */}
+      <Breadcrumb items={[{ label: "Confidentialité" }]} />
+
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto prose prose-lg">

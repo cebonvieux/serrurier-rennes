@@ -6,12 +6,16 @@ import { Tarifs } from "@/components/sections/Tarifs";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { siteConfig } from "@/config/site";
+import { getPageContent } from "@/lib/content";
 
 // Importer le contenu
 import faqData from "@/content/faq.json";
 import tarifsData from "@/content/tarifs.json";
 
 export default function HomePage() {
+  // FAQ avec contexte de la ville principale
+  const faq = getPageContent(faqData, { zone: siteConfig.city });
+
   return (
     <main>
       {/* Hero Section */}
@@ -27,11 +31,15 @@ export default function HomePage() {
       <Zones limit={12} />
 
       {/* Tarifs */}
-      <Tarifs items={tarifsData} />
+      <Tarifs 
+        items={tarifsData}
+        title="Nos Tarifs"
+        subtitle="Des prix transparents, sans surprise. Devis gratuit communiqué avant toute intervention."
+      />
 
       {/* FAQ */}
       <FAQ 
-        items={faqData}
+        items={faq}
         title={`Questions Fréquentes - Serrurier ${siteConfig.city}`}
       />
 

@@ -2,54 +2,75 @@
   "hero": {
     "badge": "🚪 Ouverture sans dégât",
     "title": "Ouverture de Porte {zone}",
-    "subtitle": "Porte claquée, bloquée ou clés perdues à {zone} ? Nos serruriers ouvrent votre porte en 30 minutes, sans abîmer la serrure ni la porte."
+    "subtitle": "Porte claquée, bloquée ou clés égarées à {zone} ? Nos serruriers ouvrent votre porte en 30 minutes, sans abîmer ni la serrure ni l'huisserie."
   },
   "intro": {
-    "title": "Spécialiste ouverture de porte à {zone}",
+    "title": "Expert ouverture de porte à {zone}",
     "paragraphs": [
-      "Une porte fermée ne doit jamais vous laisser dehors longtemps. À {zone}, {name} est le spécialiste de l'ouverture de porte sans destruction. Notre technique préserve votre serrure et votre porte dans 95% des cas.",
-      "Que vous ayez claqué la porte, perdu vos clés ou que votre serrure soit défaillante, nous intervenons rapidement à {zone} ({zonePostal}) pour vous permettre de rentrer chez vous en toute sécurité."
+      "Une porte fermée ne doit pas vous laisser dehors plus longtemps que nécessaire. À {zone}, {name} est le spécialiste de l'ouverture de porte non destructive. Notre technique préserve votre serrure et votre porte dans 95% des situations.",
+      "Porte claquée, clés perdues ou serrure grippée, nous intervenons rapidement à {zone} ({zonePostal}) pour vous permettre de retrouver votre domicile en toute tranquillité."
     ]
   },
   "situations": {
-    "title": "Types d'ouverture à {zone}",
+    "title": "Nos ouvertures de porte à {zone}",
     "items": [
       {
         "icon": "🏠",
         "title": "Porte claquée",
-        "description": "La situation la plus fréquente. Nous utilisons des techniques non destructives pour ouvrir sans trace."
+        "description": "Cas le plus fréquent. Nous utilisons des techniques fines pour ouvrir sans laisser de trace.",
+        "image": "/images/services/ouverture-de-porte-rennes-35.webp"
       },
       {
         "icon": "🔑",
-        "title": "Clés perdues",
-        "description": "Ouverture immédiate, puis changement de cylindre recommandé pour votre sécurité."
+        "title": "Clés égarées",
+        "description": "Ouverture rapide suivie d'un changement de cylindre recommandé pour votre sécurité.",
+        "image": "/images/services/perte-de-clés-rennes-35.webp"
       },
       {
         "icon": "🔒",
         "title": "Serrure grippée",
-        "description": "Clé qui tourne dans le vide ou serrure bloquée ? Nous diagnostiquons et réparons sur place."
+        "description": "Clé qui tourne à vide ou blocage ? Diagnostic et réparation effectués sur place.",
+        "image": "/images/services/changement-de-serrure-rennes-35.webp"
       },
       {
         "icon": "🗝️",
-        "title": "Clé cassée dans la serrure",
-        "description": "Extraction du morceau de clé et vérification du cylindre pour éviter tout dommage."
+        "title": "Clé cassée",
+        "description": "Extraction du morceau coincé et contrôle du cylindre pour éviter toute détérioration.",
+        "image": "/images/services/clé-cassée-rennes-35.webp"
       }
     ]
   },
   "advantages": {
-    "title": "Notre méthode d'ouverture à {zone}",
+    "title": "Notre méthode à {zone}",
     "items": [
-      "Techniques non destructives en priorité",
-      "Respect de votre serrure et de votre porte",
-      "Équipement professionnel de dernière génération",
-      "Serruriers formés aux techniques d'ouverture fine",
-      "Devis transparent avant toute intervention",
-      "Garantie de résultat"
+      "Priorité aux techniques non destructives",
+      "Préservation de votre serrure et de votre porte",
+      "Outillage professionnel de dernière génération",
+      "Artisans formés aux techniques d'ouverture fine",
+      "Devis clair avant toute intervention",
+      "Résultat garanti"
     ]
   },
+  "faq": [
+    {
+      "question": "Qui appeler pour une ouverture de porte à {zone} ?",
+      "answer": "Pour une ouverture de porte à {zone}, appelez SR35 au {phone}. Nos serruriers professionnels interviennent en 30 minutes pour ouvrir votre porte sans dégât, 24h/24 et 7j/7."
+    },
+    {
+      "question": "L'ouverture de porte abîme-t-elle ma serrure ?",
+      "answer": "Non, dans 95% des cas, nos techniciens utilisent des techniques non destructives qui préservent votre serrure et votre huisserie. Seuls les cas complexes peuvent nécessiter un remplacement."
+    },
+    {
+      "question": "Quel est le prix d'une ouverture de porte à {zone} ?",
+      "answer": "L'ouverture de porte simple débute à 89€ à {zone}. Le tarif exact dépend du type de serrure et de la complexité. Devis gratuit communiqué par téléphone avant intervention."
+    },
+    {
+      "question": "Intervenez-vous pour une porte claquée en pleine nuit ?",
+      "answer": "Oui, SR35 est disponible 24h/24 à {zone}. Que ce soit à 3h du matin ou un dimanche, un serrurier interviendra rapidement pour vous permettre de rentrer chez vous."
+    }
+  ],
   "cta": {
     "title": "Porte fermée à {zone} ?",
-    "subtitle": "Appelez maintenant pour une ouverture rapide et sans dégât !"
+    "subtitle": "Contactez-nous pour une ouverture rapide et soignée !"
   }
 }
-

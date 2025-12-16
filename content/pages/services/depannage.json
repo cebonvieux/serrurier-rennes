@@ -2,54 +2,75 @@
   "hero": {
     "badge": "🚨 Urgence 24h/24",
     "title": "Dépannage Serrurier {zone}",
-    "subtitle": "Intervention en 30 minutes à {zone}. Porte claquée, serrure bloquée, effraction ? Notre équipe de serruriers professionnels intervient 24h/24 et 7j/7."
+    "subtitle": "Intervention express en 30 minutes à {zone}. Porte claquée, serrure bloquée, effraction ? Nos artisans serruriers sont disponibles jour et nuit pour vous dépanner."
   },
   "intro": {
-    "title": "Serrurier dépannage à {zone}",
+    "title": "Votre serrurier dépanneur à {zone}",
     "paragraphs": [
-      "Vous êtes bloqué devant votre porte à {zone} ? {name} est votre serrurier de confiance pour tous vos dépannages en urgence. Nous intervenons rapidement, de jour comme de nuit, pour vous sortir de toute situation difficile.",
-      "Notre équipe de serruriers qualifiés connaît parfaitement {zone} ({zonePostal}) et ses environs. Nous arrivons chez vous en 30 minutes maximum avec tout l'équipement nécessaire pour résoudre votre problème."
+      "Vous êtes bloqué à l'extérieur de chez vous à {zone} ? {name} est votre partenaire de confiance pour tous vos dépannages de serrurerie. Notre équipe intervient rapidement, 24 heures sur 24, pour résoudre chaque situation.",
+      "Nos techniciens connaissent parfaitement {zone} ({zonePostal}) et l'ensemble du {department}. Équipés d'un véhicule atelier complet, ils arrivent chez vous en 30 minutes avec tout le matériel nécessaire."
     ]
   },
   "situations": {
-    "title": "Situations de dépannage à {zone}",
+    "title": "Interventions de dépannage à {zone}",
     "items": [
       {
         "icon": "🚪",
         "title": "Porte claquée",
-        "description": "Vous avez claqué la porte avec les clés à l'intérieur ? Nous ouvrons votre porte sans dégât."
+        "description": "Clés restées à l'intérieur ? Nous ouvrons votre porte sans endommager la serrure ni l'huisserie.",
+        "image": "/images/services/ouverture-de-porte-rennes-35.webp"
       },
       {
         "icon": "🔒",
         "title": "Serrure bloquée",
-        "description": "Votre serrure ne tourne plus ou la clé est cassée dans le cylindre ? Nous intervenons immédiatement."
+        "description": "Mécanisme grippé ou clé brisée dans le cylindre ? Intervention immédiate pour vous débloquer.",
+        "image": "/images/services/changement-de-serrure-rennes-35.webp"
       },
       {
         "icon": "🔓",
-        "title": "Effraction",
-        "description": "Victime d'un cambriolage ? Nous sécurisons votre domicile en urgence et remplaçons la serrure."
+        "title": "Cambriolage",
+        "description": "Victime d'une effraction ? Sécurisation d'urgence et remplacement de serrure dans l'heure.",
+        "image": "/images/services/réparation-porte-effraction-rennes-35.webp"
       },
       {
         "icon": "🔑",
-        "title": "Clé perdue",
-        "description": "Vous avez perdu vos clés ? Nous ouvrons et changeons la serrure pour votre sécurité."
+        "title": "Clés perdues",
+        "description": "Ouverture sans dégât puis changement du cylindre pour garantir votre sécurité.",
+        "image": "/images/services/perte-de-clés-rennes-35.webp"
       }
     ]
   },
   "advantages": {
-    "title": "Pourquoi choisir {name} pour votre dépannage à {zone} ?",
+    "title": "Pourquoi faire appel à {name} à {zone} ?",
     "items": [
-      "Intervention en 30 minutes sur {zone}",
-      "Disponible 24h/24 et 7j/7, même les jours fériés",
-      "Devis gratuit par téléphone avant intervention",
-      "Techniciens qualifiés avec plus de 10 ans d'expérience",
-      "Ouverture sans dégât dans 95% des cas",
-      "Prix transparents, pas de supplément caché"
+      "Arrivée en 30 minutes sur {zone} et environs",
+      "Disponibilité 24h/24, 7j/7, jours fériés inclus",
+      "Devis gratuit avant déplacement",
+      "Artisans qualifiés, plus de 10 ans de métier",
+      "Ouverture non destructive dans 95% des cas",
+      "Tarification transparente, sans frais cachés"
     ]
   },
+  "faq": [
+    {
+      "question": "Qui appeler pour un dépannage serrurerie à {zone} ?",
+      "answer": "Pour un dépannage serrurerie à {zone}, contactez SR35 au {phone}. Notre équipe de serruriers professionnels intervient en urgence 24h/24 et 7j/7 sur {zone} et toute la métropole rennaise. Intervention en 30 minutes garantie."
+    },
+    {
+      "question": "Combien coûte un dépannage serrurier à {zone} ?",
+      "answer": "Le tarif dépend du type d'intervention : ouverture de porte simple à partir de 89€, remplacement de cylindre à partir de 129€. Nous communiquons un devis gratuit par téléphone avant tout déplacement."
+    },
+    {
+      "question": "Intervenez-vous la nuit et le week-end à {zone} ?",
+      "answer": "Oui, SR35 assure un service de dépannage 24h/24, 7j/7, y compris les nuits, week-ends et jours fériés. Un serrurier est toujours disponible pour intervenir à {zone}."
+    },
+    {
+      "question": "Quel est le délai d'intervention pour un dépannage à {zone} ?",
+      "answer": "Nos serruriers interviennent en moyenne en 30 minutes sur {zone}. Grâce à notre implantation locale en Bretagne, nous garantissons une prise en charge rapide de votre urgence."
+    }
+  ],
   "cta": {
     "title": "Besoin d'un dépannage à {zone} ?",
-    "subtitle": "Nos serruriers sont disponibles maintenant. Appelez pour une intervention rapide !"
+    "subtitle": "Nos serruriers sont prêts à intervenir. Appelez maintenant !"
   }
 }
-

@@ -1,0 +1,16 @@
+# Robots.txt pour serrurier-rennes35.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://serrurier-rennes35.fr/sitemap.xml
+
+# Bloquer les pages non pertinentes pour le SEO
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404/
+
+# Délai entre les requêtes (optionnel, pour ne pas surcharger le serveur)
+Crawl-delay: 1
+

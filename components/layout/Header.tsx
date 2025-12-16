@@ -41,8 +41,14 @@ export function Header() {
     
     // Adapter les liens de services pour inclure la zone
     // /depannage -> /depannage/saint-malo
-    // /installation -> /installation/saint-malo (si c'est un service)
+    // /installation -> /installation/saint-malo
     const path = href.replace(/^\//, '');
+    
+    // Pages spéciales avec structure /page/[zone]
+    const pagesWithZones = ['depannage', 'installation'];
+    if (pagesWithZones.includes(path)) {
+      return `/${path}/${currentZoneSlug}`;
+    }
     
     // Vérifier si c'est un lien de service
     const service = services.find(s => s.slug === path);
@@ -63,26 +69,36 @@ export function Header() {
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.webp"
+              src="/images/logos/serrurier-rennes35-sr35.webp"
               alt={`Logo ${siteConfig.name}`}
               width={50}
               height={50}
               className="w-10 h-10 md:w-12 md:h-12"
             />
-            <span className="font-bold text-lg md:text-xl text-gray-900">
-              {siteConfig.name}
-            </span>
           </Link>
 
+          {/* Téléphone Mobile - visible uniquement sur mobile */}
+          <a
+            href={siteConfig.phoneLink}
+            className="flex md:hidden items-center gap-1.5 bg-primary-600 text-white font-semibold text-xs px-3 py-2 rounded-full"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
+              />
+            </svg>
+            <span>{siteConfig.phone}</span>
+          </a>
+
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-7">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={getNavHref(item.href)}
-                className="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-primary-600 font-semibold text-[15px] transition-colors"
               >
                 {item.label}
               </Link>

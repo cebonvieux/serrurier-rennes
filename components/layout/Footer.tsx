@@ -14,11 +14,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image
-                src="/images/logo.webp"
+                src="/images/logos/serrurier-rennes35-sr35.webp"
                 alt={`Logo ${siteConfig.name}`}
                 width={40}
                 height={40}
-                className="w-10 h-10 brightness-0 invert"
+                className="w-10 h-10"
               />
               <span className="font-bold text-xl">{siteConfig.name}</span>
             </div>
@@ -145,6 +145,15 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      {/* Mention tarifs */}
+      <div className="border-t border-gray-800">
+        <div className="container py-4">
+          <p className="text-gray-500 text-xs text-center">
+            Tous les prix indiqués sont exprimés en HT (Hors Taxes). Des majorations peuvent s&apos;appliquer pour les interventions en soirée, le week-end et les jours fériés.
+          </p>
         </div>
       </div>
 

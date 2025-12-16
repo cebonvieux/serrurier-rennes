@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, zones, services } from "@/config/site";
 import { getPageContent, getZoneBySlug, getServiceBySlug } from "@/lib/content";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import faqData from "@/content/faq.json";
 
 // Import des contenus de chaque service
@@ -93,12 +95,15 @@ export default function ServiceZonePage({ params }: Props) {
     serviceSlug: service.slug,
   });
 
-  // FAQ adaptée à la zone
-  const zoneFaq = getPageContent(faqData, {
+  // FAQ personnalisée du service (avec variables remplacées pour la zone)
+  const serviceFaq = content.faq ? content.faq : [];
+  
+  // FAQ générale en complément
+  const generalFaq = getPageContent(faqData, {
     zone: zone.name,
     zoneSlug: zone.slug,
     zonePostal: zone.postalCode,
-  }).slice(0, 4);
+  }).slice(0, 2);
 
   // Autres zones pour le maillage interne
   const otherZones = zones.filter(z => z.slug !== zone.slug).slice(0, 6);
@@ -108,40 +113,46 @@ export default function ServiceZonePage({ params }: Props) {
 
   return (
     <main className="pt-20">
-      {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-3 border-b">
-        <div className="container">
-          <ol className="flex items-center gap-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-primary-600">Accueil</Link></li>
-            <li>/</li>
-            <li><Link href={`/${service.slug}`} className="hover:text-primary-600">{service.name}</Link></li>
-            <li>/</li>
-            <li className="text-gray-900 font-medium">{zone.name}</li>
-          </ol>
-        </div>
-      </nav>
+      {/* Fil d'Ariane */}
+      <Breadcrumb items={[
+        { label: "Services", href: "/services" },
+        { label: service.name, href: `/${service.slug}` },
+        { label: zone.name }
+      ]} />
 
-      {/* Hero */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary-50 via-white to-gray-50">
-        <div className="container">
+      {/* Hero avec image de fond */}
+      <section className="relative py-10 md:py-20 overflow-hidden">
+        {/* Image de fond */}
+        <div className="absolute inset-0">
+          <Image
+            src={service.bgImage || "/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"}
+            alt={`${service.name} ${zone.name}`}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50" />
+        </div>
+
+        <div className="container relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm font-semibold mb-4 md:mb-6">
               {content.hero.badge}
             </span>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {content.hero.title}
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-white/90 mb-8">
               {content.hero.subtitle}
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a href={siteConfig.phoneLink} className="btn-phone text-lg">
+              <a href={siteConfig.phoneLink} className="btn-phone text-lg shadow-xl">
                 📞 {siteConfig.phone}
               </a>
-              <Link href="/contact" className="btn-secondary">
+              <Link href="/contact" className="btn-secondary bg-white">
                 Demander un devis
               </Link>
             </div>
@@ -161,23 +172,41 @@ export default function ServiceZonePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Situations / Types d'intervention */}
-      <section className="section bg-gray-50">
+      {/* Situations / Types d'intervention avec images */}
+      <section className="section bg-gradient-to-r from-white via-slate-100 to-slate-300">
         <div className="container">
           <h2 className="section-title text-center mb-12">{content.situations.title}</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {content.situations.items.map((item, index) => (
-              <div key={index} className="card">
-                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center text-2xl mb-4">
+              <div key={index} className="relative overflow-hidden rounded-2xl min-h-[220px] group">
+                {/* Image de fond */}
+                {item.image ? (
+                  <>
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/85 transition-all duration-300" />
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800" />
+                )}
+                
+                {/* Contenu */}
+                <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl mb-3 border border-white/20">
                   {item.icon}
                 </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
+                  <h3 className="font-bold text-lg text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                  <p className="text-white/80 text-sm">
                   {item.description}
                 </p>
+                </div>
               </div>
             ))}
           </div>
@@ -218,23 +247,55 @@ export default function ServiceZonePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Maillage : Autres services dans cette zone */}
+      {/* Maillage : Autres services dans cette zone avec images */}
       <section className="section bg-gray-50">
         <div className="container">
           <h2 className="section-title text-center mb-8">
             Nos autres services à {zone.name}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {otherServices.map((s) => (
-              <Link
-                key={s.id}
-                href={`/${s.slug}/${zone.slug}`}
-                className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center gap-3"
-              >
-                <span className="text-2xl">{s.icon}</span>
-                <span className="font-medium text-gray-900">{s.name}</span>
-              </Link>
-            ))}
+            {otherServices.map((s) => {
+              const hasExternalUrl = 'externalUrl' in s && s.externalUrl;
+              const serviceUrl = hasExternalUrl ? s.externalUrl as string : `/${s.slug}/${zone.slug}`;
+              
+              const cardContent = (
+                <div className="relative overflow-hidden rounded-2xl min-h-[160px] group">
+                  {/* Image de fond */}
+                  <Image
+                    src={s.bgImage || "/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"}
+                    alt={s.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/85 transition-all duration-300" />
+                  
+                  {/* Contenu */}
+                  <div className="relative z-10 h-full flex flex-col justify-end p-4">
+                    <div className="w-9 h-9 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-lg mb-2 border border-white/20">
+                      {s.icon}
+                    </div>
+                    <h3 className="font-bold text-white text-base">
+                      {s.name}
+                    </h3>
+                  </div>
+                </div>
+              );
+
+              return hasExternalUrl ? (
+                <a
+                  key={s.id}
+                  href={serviceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <Link key={s.id} href={serviceUrl}>
+                  {cardContent}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -265,19 +326,17 @@ export default function ServiceZonePage({ params }: Props) {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ personnalisée du service */}
       <FAQ
-        items={zoneFaq}
-        title={`Questions fréquentes - ${service.name} ${zone.name}`}
+        items={serviceFaq.length > 0 ? serviceFaq : generalFaq}
+        title={`Questions fréquentes - ${service.name} à ${zone.name}`}
       />
 
       {/* CTA */}
       <CTA
         title={content.cta.title}
         subtitle={content.cta.subtitle}
-        variant="dark"
       />
     </main>
   );
 }
-

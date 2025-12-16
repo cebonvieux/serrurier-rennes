@@ -11,7 +11,7 @@ module.exports = {
   safelist: [
     'animate-fadeIn',
     {
-      pattern: /^(bg|text|border)-(primary)-(600|700|800)$/,
+      pattern: /^(bg|text|border|shadow)-(primary|accent)-(500|600|700|800)$/,
       variants: ['hover'],
     },
   ],
@@ -19,29 +19,35 @@ module.exports = {
     extend: {
       colors: {
         // ═══════════════════════════════════════════════════════════════
-        // COULEURS PRINCIPALES - MODIFIER ICI POUR CHAQUE SITE
+        // COULEURS PRINCIPALES - PALETTE BRETONNE (bleu marine #1d3557)
         // ═══════════════════════════════════════════════════════════════
         primary: {
-          50: '#e8f4fc',
-          100: '#c5e4f8',
-          200: '#9dd2f3',
-          300: '#75c0ee',
-          400: '#4daeea',
-          500: '#2196e3',
-          600: '#1976d2',  // Couleur principale
-          700: '#1565c0',
-          800: '#0d47a1',
-          900: '#0a3d8f',
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#6e8ca8',
+          500: '#486581',
+          600: '#1d3557',  // Couleur principale - bleu marine breton
+          700: '#17293f',
+          800: '#102a43',
+          900: '#0a1929',
+          950: '#061018',
         },
-        // Vous pouvez ajouter d'autres couleurs personnalisées ici
-        // accent: {
-        //   500: '#ff6b35',
-        //   600: '#e55a2b',
-        // },
+        // Accent bleu marine foncé (couleur du "SR" et cercle du logo)
+        accent: {
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#6e8ca8',
+          500: '#334e68',
+          600: '#1d3557',
+        },
       },
       fontFamily: {
-        // Police principale - MODIFIER ICI SI BESOIN
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        // Police principale - DM Sans pour un look moderne et professionnel
+        sans: ['var(--font-dm-sans)', 'DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       animation: {
         fadeIn: 'fadeIn 0.3s ease-in-out',

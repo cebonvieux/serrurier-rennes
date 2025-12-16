@@ -1,51 +1,51 @@
 {
   "hero": {
-    "badge": "⚡ Intervention 24h/24",
-    "title": "Serrurier {city}",
-    "subtitle": "Intervention rapide en 30 minutes. Dépannage, ouverture de porte, changement de serrure. Disponible 24h/24 et 7j/7."
+    "badge": "⚡ Disponible en Bretagne 24h/24",
+    "title": "Serrurier {city} 35",
+    "subtitle": "Dépannage, ouverture de porte, changement de serrure. Service disponible 24h/24, 7j/7.",
+    "subtitleSecondary": "Votre artisan serrurier intervient en 30 minutes à {city} et dans toute la métropole rennaise."
   },
   "trustBadges": [
     {
       "icon": "⏱️",
       "title": "30 min",
-      "subtitle": "Intervention"
+      "subtitle": "Sur place"
     },
     {
       "icon": "🛡️",
-      "title": "Garanti",
-      "subtitle": "Travaux assurés"
+      "title": "Certifié",
+      "subtitle": "Artisan breton"
     },
     {
       "icon": "💳",
-      "title": "Devis gratuit",
-      "subtitle": "Sans engagement"
+      "title": "Devis offert",
+      "subtitle": "Sans surprise"
     }
   ],
   "whyUs": {
-    "title": "Pourquoi nous choisir ?",
-    "subtitle": "{name}, c'est une équipe de serruriers professionnels à votre service 24h/24.",
+    "title": "Votre serrurier de confiance à {city}",
+    "subtitle": "{name} accompagne les habitants de {city} et de la métropole rennaise depuis plus de 10 ans. Une équipe locale, réactive et professionnelle.",
     "advantages": [
       {
         "icon": "⚡",
-        "title": "Intervention rapide",
-        "description": "Arrivée sur place en 30 minutes en moyenne dans toute l'agglomération."
+        "title": "Rapidité d'intervention",
+        "description": "Présent sur place en 30 minutes dans tout {city}, de Villejean au Thabor, de Beaulieu à Cleunay."
       },
       {
         "icon": "🛡️",
-        "title": "Travail garanti",
-        "description": "Tous nos travaux sont couverts par notre assurance responsabilité civile professionnelle."
+        "title": "Garantie totale",
+        "description": "Chaque intervention est couverte par notre assurance professionnelle. Travail soigné et durable."
       },
       {
         "icon": "💰",
-        "title": "Prix transparents",
-        "description": "Devis gratuit communiqué avant intervention. Aucun frais caché."
+        "title": "Tarifs clairs",
+        "description": "Devis gratuit communiqué avant intervention. Prix fixe annoncé avant déplacement, sans mauvaise surprise."
       },
       {
         "icon": "🏆",
-        "title": "Expertise reconnue",
-        "description": "Artisans qualifiés avec plus de 10 ans d'expérience en serrurerie."
+        "title": "Savoir-faire breton",
+        "description": "Artisans serruriers qualifiés, formés aux dernières techniques. Connaissance parfaite du terrain rennais."
       }
     ]
   }
 }
-

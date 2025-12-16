@@ -25,74 +25,99 @@ export function Hero({
   const displaySubtitle = subtitle || content.hero.subtitle;
 
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-blue-50" />
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+    <section className="relative min-h-[100svh] md:min-h-0 pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden flex flex-col">
+      {/* Background - Image de Rennes */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/hero-pattern.webp"
-          alt=""
+          src="/images/backgrounds/serrurier-rennes-35-centre.webp"
+          alt="Rennes centre-ville"
           fill
           className="object-cover"
           priority
         />
+        {/* Overlay pour lisibilité du texte - opacité augmentée */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50 md:from-primary-600/80 md:via-primary-500/60 md:to-primary-400/30" />
       </div>
 
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Contenu */}
-          <div>
-            {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-              {displayBadge}
-            </span>
+      <div className="container relative z-10 w-full flex-1 flex flex-col md:block">
+        {/* Partie haute : Texte */}
+        <div className="md:max-w-2xl">
+          {/* Badge - pleine largeur */}
+          <span className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm md:text-base font-semibold mb-4 md:mb-6">
+            {displayBadge}
+          </span>
 
-            {/* Titre */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              {displayTitle}
-            </h1>
+          {/* Titre - pleine largeur */}
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-6 leading-[1.05]">
+            {displayTitle}
+          </h1>
 
-            {/* Sous-titre */}
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+          {/* Sous-titres - largeur limitée sur mobile pour voir le technicien */}
+          <div className="max-w-[65%] sm:max-w-xs md:max-w-lg">
+            {/* Sous-titre principal */}
+            <p className="text-lg md:text-xl text-white mb-2 md:mb-4 leading-snug font-medium">
               {displaySubtitle}
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a href={siteConfig.phoneLink} className="btn-phone text-lg">
-                📞 {siteConfig.phone}
-              </a>
-              <a href="/contact" className="btn-secondary">
-                Demander un devis
-              </a>
-            </div>
+            {/* Sous-titre secondaire - plus petit */}
+            <p className="text-base md:text-base text-white/70 mb-0 md:mb-8 leading-snug">
+              {content.hero.subtitleSecondary}
+            </p>
+          </div>
+        </div>
 
-            {/* Badges de confiance - depuis le fichier de contenu */}
-            <div className="flex flex-wrap gap-4 items-center">
-              {content.trustBadges.map((badge, index) => (
-                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
-                  <span className="text-2xl">{badge.icon}</span>
-                  <div>
-                    <p className="font-semibold text-gray-900">{badge.title}</p>
-                    <p className="text-xs text-gray-500">{badge.subtitle}</p>
-                  </div>
+        {/* Espace flexible sur mobile */}
+        <div className="flex-1 md:hidden" />
+
+        {/* Partie basse : CTAs et Badges */}
+        <div className="max-w-xl">
+          {/* CTAs - Stack vertical sur mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-8">
+            <a 
+              href={siteConfig.phoneLink} 
+              className="btn-phone text-base md:text-lg shadow-xl text-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              {siteConfig.phone}
+            </a>
+            <a 
+              href="/contact" 
+              className="btn-secondary bg-white text-center justify-center"
+            >
+              Demander un devis
+            </a>
+          </div>
+
+          {/* Badges de confiance - Grille 2x2 sur mobile */}
+          <div className="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:gap-3">
+            {content.trustBadges.map((badge, index) => (
+              <div 
+                key={index} 
+                className="flex items-center gap-2 px-3 py-2.5 md:px-4 md:py-2 bg-white/15 backdrop-blur-md rounded-xl border border-white/25"
+              >
+                <span className="text-xl md:text-2xl flex-shrink-0">{badge.icon}</span>
+                <div className="min-w-0">
+                  <p className="font-bold text-white text-sm md:text-base leading-tight">{badge.title}</p>
+                  <p className="text-[11px] md:text-xs text-white/70 leading-tight truncate">{badge.subtitle}</p>
                 </div>
-              ))}
-            </div>
-
-            {/* Avis Google */}
+              </div>
+            ))}
+            
+            {/* Avis Google - même taille que les autres badges */}
             {showReviews && siteConfig.reviews && (
               <a
                 href={siteConfig.reviews.googleUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 mt-6 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-center gap-2 px-3 py-2.5 md:px-4 md:py-2 bg-white/15 backdrop-blur-md rounded-xl border border-white/25 hover:bg-white/25 transition-colors"
               >
-                <div className="flex">
+                <div className="flex flex-shrink-0">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className={`w-5 h-5 ${i < Math.floor(siteConfig.reviews.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                      className="w-3.5 h-3.5 text-yellow-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -100,47 +125,16 @@ export function Hero({
                     </svg>
                   ))}
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-900">
+                <div className="min-w-0">
+                  <p className="font-bold text-white text-sm md:text-base leading-tight">
                     {siteConfig.reviews.rating}/5
                   </p>
-                  <p className="text-xs text-gray-500">
-                    {siteConfig.reviews.count} avis Google
+                  <p className="text-[11px] md:text-xs text-white/70 leading-tight truncate">
+                    {siteConfig.reviews.count} avis
                   </p>
                 </div>
               </a>
             )}
-          </div>
-
-          {/* Image */}
-          <div className="relative">
-            <div className="relative aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-primary-600 rounded-3xl transform rotate-3" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/hero-serrurier.webp"
-                  alt={`Serrurier professionnel à ${siteConfig.city}`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-            
-            {/* Badge flottant */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 animate-float">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Disponible</p>
-                  <p className="text-sm text-gray-500">24h/24 - 7j/7</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

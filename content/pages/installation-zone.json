@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "🔐 Sécurité & Installation",
+    "title": "Installation de Serrure {zone}",
+    "subtitle": "Protégez votre logement à {zone} avec des serrures haute sécurité. Installation, remplacement de cylindre, blindage de porte. Devis gratuit, intervention rapide."
+  },
+  "certifications": [
+    { "icon": "🛡️", "label": "Serrures A2P" },
+    { "icon": "✅", "label": "Garantie 2 ans" },
+    { "icon": "🏆", "label": "Grandes marques" }
+  ],
+  "prestations": [
+    {
+      "icon": "🔑",
+      "title": "Remplacement de cylindre",
+      "description": "Changement du cylindre par un modèle haute sécurité anti-crochetage. Solution économique pour renforcer votre protection.",
+      "price": "À partir de 89€",
+      "image": "/images/services/changement-de-cylindre-serrurerie-rennes-35.webp"
+    },
+    {
+      "icon": "🔐",
+      "title": "Serrure multipoints",
+      "description": "Pose d'une serrure 3, 5 ou 7 points de fermeture. Serrures certifiées A2P reconnues par les assurances.",
+      "price": "À partir de 150€",
+      "image": "/images/services/installation-de-serrure-rennes-35.webp"
+    },
+    {
+      "icon": "🛡️",
+      "title": "Blindage de porte",
+      "description": "Renforcement de votre porte actuelle avec blindage acier et serrure sécurisée. Alternative au remplacement complet.",
+      "price": "À partir de 800€",
+      "image": "/images/services/blindage-de-porte-rennes-35.webp"
+    },
+    {
+      "icon": "🚪",
+      "title": "Bloc-porte blindé",
+      "description": "Installation d'une porte blindée certifiée A2P BP. Protection maximale pour votre domicile.",
+      "price": "Sur devis",
+      "image": "/images/services/bloc-porte-blindée-rennes-35.webp"
+    }
+  ],
+  "brandsWithImages": [
+    { "name": "Vachette", "image": "/images/gallery/serrurier-vachette-lille-59.webp" },
+    { "name": "JPM", "image": "/images/gallery/serrurier-jpm.webp" },
+    { "name": "Picard", "image": "/images/gallery/serrurier-picard.webp" },
+    { "name": "A2P", "image": "/images/gallery/serrurier-a2p.webp" },
+    { "name": "Reelax", "image": "/images/gallery/serrurier-reelax.webp" }
+  ],
+  "otherBrands": [
+    "Fichet",
+    "Bricard",
+    "Abloy",
+    "Mul-T-Lock",
+    "Pollux",
+    "Mottura",
+    "Dom",
+    "Keso",
+    "Abus"
+  ],
+  "cta": {
+    "title": "Projet d'installation à {zone} ?",
+    "subtitle": "Devis gratuit et conseils personnalisés. Intervention rapide dans toute la métropole."
+  }
+}

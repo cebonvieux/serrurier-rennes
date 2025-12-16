@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "🛡️ Protection maximale",
+    "badge": "🛡️ Sécurité renforcée",
     "title": "Blindage de Porte {zone}",
-    "subtitle": "Renforcez la sécurité de votre domicile à {zone} avec un blindage de porte professionnel. Protection anti-effraction certifiée."
+    "subtitle": "Protégez votre domicile à {zone} avec un blindage de porte professionnel. Solution anti-effraction certifiée, installation soignée."
   },
   "intro": {
-    "title": "Expert blindage de porte à {zone}",
+    "title": "Spécialiste blindage de porte à {zone}",
     "paragraphs": [
-      "Le blindage de porte est la solution la plus efficace pour protéger votre domicile contre les cambriolages. À {zone}, {name} vous propose des solutions de blindage adaptées à votre porte existante.",
-      "Contrairement au remplacement complet de la porte, le blindage consiste à renforcer votre porte actuelle avec une plaque d'acier et une serrure haute sécurité. C'est plus économique et tout aussi efficace."
+      "Le blindage de porte constitue la protection la plus efficace contre les tentatives d'effraction. À {zone}, {name} propose des solutions de blindage adaptées à votre porte existante.",
+      "Contrairement au remplacement complet, le blindage consiste à renforcer votre porte actuelle avec une plaque d'acier et une serrure haute sécurité. C'est économique et tout aussi efficace."
     ]
   },
   "situations": {
@@ -16,40 +16,61 @@
     "items": [
       {
         "icon": "🚪",
-        "title": "Blindage de porte existante",
-        "description": "Renforcement de votre porte en bois avec tôle d'acier et serrure multipoints."
+        "title": "Blindage porte existante",
+        "description": "Renforcement de votre porte en bois avec tôle d'acier et serrure multipoints.",
+        "image": "/images/services/blindage-de-porte-rennes-35.webp"
       },
       {
         "icon": "🏠",
-        "title": "Porte blindée complète",
-        "description": "Remplacement par un bloc-porte blindé certifié A2P BP (Bloc Porte)."
+        "title": "Bloc-porte blindé",
+        "description": "Remplacement par une porte blindée complète certifiée A2P BP.",
+        "image": "/images/services/bloc-porte-blindée-rennes-35.webp"
       },
       {
         "icon": "🔒",
-        "title": "Blindage + serrure haute sécurité",
-        "description": "Pack complet : blindage + serrure 5 points A2P pour une protection optimale."
+        "title": "Blindage + serrure sécurisée",
+        "description": "Pack complet : blindage acier + serrure 5 points A2P pour une protection maximale.",
+        "image": "/images/services/changement-de-serrure-rennes-35.webp"
       },
       {
         "icon": "🏢",
-        "title": "Blindage porte de cave/garage",
-        "description": "Sécurisation des accès secondaires souvent ciblés par les cambrioleurs."
+        "title": "Blindage cave/garage",
+        "description": "Sécurisation des accès secondaires, souvent visés lors des cambriolages.",
+        "image": "/images/services/depannage-rideau-metallique-rennes-35.webp"
       }
     ]
   },
   "advantages": {
-    "title": "Avantages du blindage de porte à {zone}",
+    "title": "Bénéfices du blindage à {zone}",
     "items": [
       "Protection anti-effraction certifiée A2P",
-      "Conservation de l'aspect esthétique de votre porte",
-      "Installation en quelques heures",
-      "Moins coûteux qu'une porte blindée neuve",
+      "Aspect esthétique de votre porte préservé",
+      "Installation réalisée en quelques heures",
+      "Coût inférieur à une porte blindée neuve",
       "Amélioration de l'isolation phonique et thermique",
-      "Devis gratuit et conseils personnalisés"
+      "Devis gratuit et conseils sur mesure"
     ]
   },
+  "faq": [
+    {
+      "question": "Qui appeler pour un blindage de porte à {zone} ?",
+      "answer": "Pour un blindage de porte à {zone}, contactez SR35 au {phone}. Nos experts en sécurité réalisent des blindages sur-mesure, certifiés A2P, avec devis gratuit et sans engagement."
+    },
+    {
+      "question": "Quelle différence entre blindage et porte blindée ?",
+      "answer": "Le blindage renforce votre porte existante avec une plaque d'acier (plus économique). La porte blindée est un bloc complet (porte + bâti) offrant une sécurité maximale mais plus coûteux."
+    },
+    {
+      "question": "Combien coûte un blindage de porte à {zone} ?",
+      "answer": "Le blindage de porte démarre à partir de 800€ (pose comprise). Une porte blindée complète coûte entre 1500€ et 3500€ selon la certification. Devis gratuit sur place."
+    },
+    {
+      "question": "Le blindage est-il efficace contre les cambriolages ?",
+      "answer": "Oui, un blindage certifié A2P résiste aux tentatives d'effraction pendant 5 à 15 minutes, ce qui dissuade la majorité des cambrioleurs qui abandonnent après 3 minutes."
+    }
+  ],
   "cta": {
     "title": "Blindage de porte à {zone}",
-    "subtitle": "Demandez un devis gratuit pour sécuriser votre domicile."
+    "subtitle": "Demandez votre devis gratuit pour sécuriser votre logement."
   }
 }
-

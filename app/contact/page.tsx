@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { ContactForm } from "@/components/forms/ContactForm";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
   title: `Contact - Serrurier`,
@@ -9,6 +11,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="pt-20">
+      {/* Fil d'Ariane */}
+      <Breadcrumb items={[{ label: "Contact" }]} />
+
       {/* Header */}
       <section className="py-16 bg-gradient-to-br from-primary-50 via-white to-blue-50">
         <div className="container text-center">
@@ -98,100 +103,10 @@ export default function ContactPage() {
             </div>
 
             {/* Formulaire */}
-            <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Demande de devis
-              </h2>
-              <form className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Nom *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="06 XX XX XX XX"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    Type d&apos;intervention
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="">Sélectionnez...</option>
-                    <option value="urgence">Urgence / Porte claquée</option>
-                    <option value="changement">Changement de serrure</option>
-                    <option value="installation">Installation serrure</option>
-                    <option value="blindage">Blindage de porte</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Décrivez votre besoin..."
-                  />
-                </div>
-
-                <button type="submit" className="w-full btn-primary">
-                  Envoyer ma demande
-                </button>
-
-                <p className="text-xs text-gray-500 text-center">
-                  Pour une urgence, appelez directement le{" "}
-                  <a href={siteConfig.phoneLink} className="text-primary-600 font-semibold">
-                    {siteConfig.phone}
-                  </a>
-                </p>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
     </main>
   );
 }
-

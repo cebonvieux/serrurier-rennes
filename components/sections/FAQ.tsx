@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 interface FAQItem {
@@ -23,8 +24,19 @@ export function FAQ({
   const defaultSubtitle = `Retrouvez les réponses aux questions les plus fréquentes sur nos services de serrurerie à ${siteConfig.city}.`;
 
   return (
-    <section className="section bg-white">
-      <div className="container">
+    <section className="section relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/backgrounds/serrurier-rennes-bretagne-pas-cher.webp"
+          alt="FAQ serrurier Rennes"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-white/100" />
+      </div>
+      
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left - Header & CTA */}
           <div className="lg:sticky lg:top-24">
@@ -34,7 +46,7 @@ export function FAQ({
               {subtitle || defaultSubtitle}
             </p>
 
-            <div className="bg-primary-50 rounded-2xl p-6">
+            <div className="bg-primary-50/80 backdrop-blur-sm rounded-2xl p-6 border border-primary-100">
               <h3 className="font-bold text-gray-900 mb-2">
                 Vous avez une autre question ?
               </h3>
@@ -57,7 +69,7 @@ export function FAQ({
             {items.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-xl overflow-hidden hover:border-primary-300 transition-colors"
+                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl overflow-hidden hover:border-primary-300 hover:shadow-md transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}

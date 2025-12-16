@@ -2,13 +2,13 @@
   "hero": {
     "badge": "🔑 Cylindres haute sécurité",
     "title": "Remplacement de Cylindre {zone}",
-    "subtitle": "Changement de cylindre à {zone} par des professionnels. Cylindres anti-crochetage, anti-perçage et anti-bumping pour une sécurité renforcée."
+    "subtitle": "Changement de cylindre à {zone} par des professionnels. Cylindres anti-crochetage, anti-perçage et anti-bumping pour une sécurité accrue."
   },
   "intro": {
-    "title": "Spécialiste du cylindre de serrure à {zone}",
+    "title": "Expert cylindre de serrure à {zone}",
     "paragraphs": [
-      "Le cylindre (ou barillet) est le cœur de votre serrure. C'est la pièce qui reçoit la clé et permet le verrouillage. À {zone}, {name} remplace votre cylindre par un modèle haute sécurité en quelques minutes.",
-      "Le remplacement du cylindre est souvent suffisant pour renforcer votre sécurité sans changer toute la serrure. C'est une solution rapide et économique, particulièrement recommandée après une perte de clés ou un emménagement."
+      "Le cylindre (ou barillet) est l'élément central de votre serrure. C'est lui qui reçoit la clé et actionne le verrouillage. À {zone}, {name} remplace votre cylindre par un modèle haute sécurité en quelques minutes.",
+      "Le remplacement du cylindre suffit souvent à renforcer votre sécurité sans changer la serrure entière. Solution rapide et économique, particulièrement recommandée après une perte de clés ou lors d'un emménagement."
     ]
   },
   "situations": {
@@ -16,40 +16,61 @@
     "items": [
       {
         "icon": "🔑",
-        "title": "Perte de clés",
-        "description": "Pour éviter tout risque, remplacez le cylindre dès que vous perdez vos clés."
+        "title": "Clés perdues",
+        "description": "Pour écarter tout risque, changez le cylindre dès que vous égarez vos clés.",
+        "image": "/images/services/perte-de-clés-rennes-35.webp"
       },
       {
         "icon": "🏠",
-        "title": "Nouvel emménagement",
-        "description": "Changez le cylindre pour être sûr d'être le seul à posséder les clés."
+        "title": "Emménagement",
+        "description": "Remplacez le cylindre pour être certain d'être le seul détenteur des clés.",
+        "image": "/images/services/changement-de-cylindre-serrurerie-rennes-35.webp"
       },
       {
         "icon": "⬆️",
-        "title": "Mise à niveau sécurité",
-        "description": "Passage à un cylindre haute sécurité certifié pour plus de protection."
+        "title": "Montée en sécurité",
+        "description": "Passage à un cylindre haute sécurité certifié pour une meilleure protection.",
+        "image": "/images/services/blindage-de-porte-rennes-35.webp"
       },
       {
         "icon": "🔧",
-        "title": "Cylindre usé ou grippé",
-        "description": "Clé difficile à tourner ? Remplacez le cylindre avant le blocage complet."
+        "title": "Cylindre usé",
+        "description": "Clé difficile à tourner ? Changez le cylindre avant qu'il ne se bloque complètement.",
+        "image": "/images/services/clé-cassée-rennes-35.webp"
       }
     ]
   },
   "advantages": {
     "title": "Nos cylindres haute sécurité à {zone}",
     "items": [
-      "Cylindres anti-crochetage",
-      "Protection anti-perçage",
+      "Protection anti-crochetage",
+      "Résistance anti-perçage",
       "Système anti-bumping",
       "Carte de propriété (reproduction contrôlée)",
-      "Marques reconnues : Vachette, Bricard, Mul-T-Lock",
-      "Installation en 15 minutes"
+      "Marques de référence : Vachette, Bricard, Mul-T-Lock",
+      "Pose en 15 minutes"
     ]
   },
+  "faq": [
+    {
+      "question": "Qui appeler pour un remplacement de cylindre à {zone} ?",
+      "answer": "Pour un remplacement de cylindre à {zone}, appelez SR35 au {phone}. Nos serruriers changent votre cylindre en 15 minutes par un modèle haute sécurité, avec intervention rapide et devis transparent."
+    },
+    {
+      "question": "Combien coûte un changement de cylindre à {zone} ?",
+      "answer": "Le remplacement de cylindre débute à 129€ (fourniture et pose). Un cylindre haute sécurité (anti-crochetage, anti-bumping) coûte entre 150€ et 300€. Devis gratuit par téléphone."
+    },
+    {
+      "question": "Faut-il changer le cylindre après une perte de clés ?",
+      "answer": "Oui, c'est fortement recommandé. Si vos clés sont retrouvées par un tiers, votre domicile n'est plus en sécurité. Le changement de cylindre est la seule solution fiable."
+    },
+    {
+      "question": "Quelle marque de cylindre choisir ?",
+      "answer": "SR35 recommande les cylindres Vachette, Bricard et Mul-T-Lock pour leur fiabilité. Nous vous conseillons le modèle adapté à votre serrure et votre niveau de sécurité souhaité."
+    }
+  ],
   "cta": {
     "title": "Remplacement de cylindre à {zone}",
-    "subtitle": "Appelez pour un changement de cylindre rapide et sécurisé."
+    "subtitle": "Appelez pour un changement rapide et sécurisé."
   }
 }
-

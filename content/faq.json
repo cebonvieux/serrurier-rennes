@@ -1,35 +1,86 @@
 [
   {
-    "question": "Quel est le délai d'intervention d'un serrurier ?",
-    "answer": "Notre équipe intervient en <strong>30 minutes en moyenne</strong> dans {city} et son agglomération. Nous sommes disponibles 24h/24 et 7j/7, y compris les jours fériés."
+    "question": "En combien de temps intervenez-vous à {zone} ?",
+    "answer": "Notre équipe arrive en <strong>30 minutes en moyenne</strong> partout à {zone} et dans la métropole. Nous sommes disponibles <strong>24h/24 et 7j/7</strong>, week-ends et jours fériés compris."
   },
   {
-    "question": "Combien coûte une ouverture de porte claquée ?",
-    "answer": "Une ouverture de porte claquée (sans destruction) coûte entre <strong>89€ et 150€</strong> en journée. Le tarif exact dépend du type de serrure. Un devis précis vous est communiqué par téléphone avant intervention."
+    "question": "Quel est le tarif pour ouvrir une porte claquée à {zone} ?",
+    "answer": "L'ouverture d'une porte claquée sans destruction coûte entre <strong>98€ et 150€</strong> en journée selon le type de serrure. Le tarif exact vous est communiqué avant notre intervention. Pour une porte blindée, comptez entre 150€ et 250€."
   },
   {
-    "question": "Intervenez-vous la nuit et le week-end ?",
-    "answer": "Oui, nous intervenons <strong>24h/24 et 7j/7</strong>, y compris les nuits, week-ends et jours fériés. Un supplément nuit/week-end peut s'appliquer."
+    "question": "Combien coûte un serrurier à {zone} en urgence ?",
+    "answer": "Le tarif d'un serrurier en urgence à {zone} varie selon l'intervention : <strong>ouverture de porte à partir de 98€</strong>, remplacement de cylindre à partir de 89€, changement de serrure à partir de 150€. Un supplément peut s'appliquer pour les interventions de nuit ou le week-end."
   },
   {
-    "question": "Quels modes de paiement acceptez-vous ?",
-    "answer": "Nous acceptons les paiements par <strong>carte bancaire, espèces et chèque</strong>. Le paiement s'effectue une fois l'intervention terminée et validée par vos soins."
+    "question": "Travaillez-vous les nuits et week-ends ?",
+    "answer": "Oui, nous assurons un service <strong>24 heures sur 24, 7 jours sur 7</strong>. Nos artisans interviennent de nuit, le week-end et les jours fériés. Une majoration nuit/week-end peut s'appliquer."
   },
   {
-    "question": "Vos interventions sont-elles garanties ?",
-    "answer": "Oui, toutes nos interventions sont couvertes par notre <strong>assurance responsabilité civile professionnelle</strong>. Les pièces installées bénéficient de la garantie constructeur."
+    "question": "Comment puis-je régler l'intervention ?",
+    "answer": "Nous acceptons le règlement par <strong>carte bancaire, espèces et virement</strong>. Le paiement intervient uniquement après validation de l'intervention terminée."
   },
   {
-    "question": "Puis-je avoir un devis avant l'intervention ?",
-    "answer": "Absolument ! Nous vous communiquons un <strong>devis gratuit par téléphone</strong> avant de nous déplacer. Une fois sur place, si des éléments changent, nous vous informons avant de commencer les travaux."
+    "question": "Quel est le prix pour changer une serrure à {zone} ?",
+    "answer": "Le prix d'un changement de serrure à {zone} dépend du modèle : <strong>serrure standard à partir de 150€</strong>, serrure 3 points à partir de 250€, serrure 5 points certifiée A2P à partir de 350€."
   },
   {
-    "question": "Travaillez-vous avec les assurances ?",
-    "answer": "Oui, nous travaillons régulièrement avec les compagnies d'assurance. Nous pouvons vous fournir une <strong>facture détaillée</strong> pour votre remboursement."
+    "question": "Vos travaux sont-ils garantis ?",
+    "answer": "Absolument. Toutes nos prestations sont couvertes par notre <strong>assurance responsabilité civile professionnelle</strong>. Les serrures et cylindres installés bénéficient de la garantie fabricant (2 à 5 ans selon les modèles)."
   },
   {
-    "question": "Quelles marques de serrures installez-vous ?",
-    "answer": "Nous installons toutes les grandes marques : <strong>Fichet, Vachette, Pollux, JPM, Abloy, Bricard</strong>, etc. Nous privilégions les serrures certifiées A2P pour une sécurité optimale."
+    "question": "Proposez-vous un devis gratuit à {zone} ?",
+    "answer": "Oui, nous établissons systématiquement un <strong>devis gratuit et sans engagement</strong> avant d'intervenir. Le prix annoncé est le prix final, sans frais cachés ni mauvaise surprise."
+  },
+  {
+    "question": "Combien coûte le blindage d'une porte à {zone} ?",
+    "answer": "Le blindage de porte à {zone} commence à <strong>800€ pour un blindage de porte existante</strong>. L'installation d'un bloc-porte blindé certifié A2P BP est sur devis selon les dimensions et le niveau de sécurité souhaité."
+  },
+  {
+    "question": "Intervenez-vous pour les assurances ?",
+    "answer": "Oui, nous collaborons régulièrement avec les compagnies d'assurance. Nous fournissons une <strong>facture détaillée</strong> conforme pour votre demande de remboursement suite à un cambriolage ou une effraction."
+  },
+  {
+    "question": "Quelles marques de serrures posez-vous ?",
+    "answer": "Nous installons les grandes marques reconnues : <strong>Fichet, Vachette, Bricard, Mul-T-Lock, Abloy, JPM, Picard</strong>... Nous privilégions les serrures certifiées A2P pour une sécurité maximale reconnue par les assurances."
+  },
+  {
+    "question": "Quel est le tarif pour un remplacement de cylindre à {zone} ?",
+    "answer": "Le remplacement de cylindre à {zone} coûte <strong>à partir de 89€</strong> pour un cylindre standard. Pour un cylindre haute sécurité anti-crochetage et anti-perçage, comptez entre 120€ et 200€ selon le modèle choisi."
+  },
+  {
+    "question": "Quelle serrure choisir pour une porte d'entrée ?",
+    "answer": "Pour une porte d'entrée, nous recommandons une <strong>serrure multipoints (3 à 7 points)</strong> certifiée A2P. Le niveau A2P* convient à la plupart des logements, A2P** pour une sécurité renforcée, et A2P*** pour une protection maximale. Nous vous conseillons selon votre budget et vos besoins."
+  },
+  {
+    "question": "Quelle est la différence entre serrure encastrée et en applique ?",
+    "answer": "La <strong>serrure encastrée</strong> est intégrée dans l'épaisseur de la porte (plus esthétique). La <strong>serrure en applique</strong> est fixée sur la face intérieure de la porte (installation plus simple, souvent utilisée sur portes anciennes ou blindages). Les deux offrent le même niveau de sécurité."
+  },
+  {
+    "question": "Combien de temps dure l'installation d'une serrure multipoints ?",
+    "answer": "L'installation d'une serrure multipoints prend <strong>1h30 à 3h</strong> selon le modèle et la configuration de votre porte. Une serrure 3 points est plus rapide à poser qu'une 7 points. Nous adaptons votre porte si nécessaire pour accueillir le nouveau système."
+  },
+  {
+    "question": "Faut-il changer la porte pour avoir une serrure sécurisée ?",
+    "answer": "Non, dans la plupart des cas il est possible de <strong>conserver votre porte existante</strong>. Nous pouvons installer une serrure multipoints sur votre porte actuelle ou la renforcer par un blindage. Le remplacement complet par un bloc-porte blindé n'est nécessaire que pour une sécurité maximale."
+  },
+  {
+    "question": "Une serrure connectée est-elle fiable ?",
+    "answer": "Oui, les <strong>serrures connectées</strong> des grandes marques sont fiables et sécurisées. Elles offrent des avantages : ouverture par smartphone, gestion des accès à distance, historique des entrées. Nous installons des modèles certifiés avec sauvegarde par clé mécanique en cas de panne."
+  },
+  {
+    "question": "Que signifie la certification A2P pour une serrure ?",
+    "answer": "La certification <strong>A2P (Assurance Prévention Protection)</strong> est délivrée par le CNPP après des tests rigoureux. Il existe 3 niveaux : A2P* (résistance 5 min), A2P** (résistance 10 min), A2P*** (résistance 15 min). Cette certification est reconnue par les assurances et peut réduire votre prime."
+  },
+  {
+    "question": "Peut-on installer un cylindre haute sécurité sur une ancienne serrure ?",
+    "answer": "Oui, c'est même la solution la plus économique pour renforcer votre sécurité. Un <strong>cylindre européen haute sécurité</strong> peut remplacer votre cylindre actuel si votre serrure est compatible (format standard). Installation rapide en 30 minutes, à partir de 89€."
+  },
+  {
+    "question": "Quelle garantie sur l'installation d'une serrure ?",
+    "answer": "Toutes nos installations sont couvertes par une <strong>garantie main-d'œuvre de 2 ans</strong>. Les serrures et cylindres bénéficient de la garantie fabricant (2 à 5 ans selon les marques). Notre assurance professionnelle couvre tout dommage éventuel lors de l'intervention."
+  },
+  {
+    "question": "Installez-vous des serrures pour portes de garage ?",
+    "answer": "Oui, nous intervenons sur tous types de portes : <strong>portes de garage, caves, portails, rideaux métalliques</strong>. Nous installons des serrures adaptées à chaque usage, y compris des systèmes anti-effraction pour les garages et locaux professionnels."
   }
 ]
-

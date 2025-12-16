@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, zones } from "@/config/site";
 import { CTA } from "@/components/sections/CTA";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
   title: `Zones d'intervention - Serrurier`,
@@ -15,41 +17,36 @@ export default function ZonesPage() {
 
   return (
     <main className="pt-20">
-      {/* Header */}
-      <section className="py-16 bg-gradient-to-br from-primary-50 via-white to-blue-50">
-        <div className="container text-center">
-          <span className="badge-primary mb-4">📍 Zones d&apos;intervention</span>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      {/* Fil d'Ariane */}
+      <Breadcrumb items={[{ label: "Zones d'intervention" }]} />
+
+      {/* Header avec image de fond */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/backgrounds/serrurier-rennes-centre-bretagne.webp"
+            alt="Rennes centre-ville Bretagne"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50" />
+        </div>
+        <div className="container relative z-10 text-center">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm font-semibold mb-6">
+            📍 Zones d&apos;intervention
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Serrurier {siteConfig.city} et environs
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Notre équipe intervient dans tout {siteConfig.city} et son agglomération.
             Intervention rapide en 30 minutes.
           </p>
         </div>
       </section>
 
-      {/* Ville principale */}
-      {mainCity && (
-        <section className="section bg-white">
-          <div className="container">
-            <div className="bg-primary-600 rounded-3xl p-8 md:p-12 text-white text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Serrurier {mainCity.name}
-              </h2>
-              <p className="text-primary-100 text-lg mb-6 max-w-2xl mx-auto">
-                Basés à {mainCity.name}, nous intervenons rapidement dans tout le {mainCity.postalCode} 
-                pour tous vos besoins en serrurerie : dépannage, installation, changement de serrure.
-              </p>
-              <a href={siteConfig.phoneLink} className="btn-phone inline-flex">
-                📞 {siteConfig.phone}
-              </a>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Autres zones */}
+      {/* Zones */}
       <section className="section bg-gray-50">
         <div className="container">
           <h2 className="section-title text-center mb-12">
@@ -99,11 +96,11 @@ export default function ZonesPage() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🚗</span>
+                <span className="text-3xl">⭐</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Déplacement inclus</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Service de qualité</h3>
               <p className="text-gray-600 text-sm">
-                Le déplacement est inclus dans le devis pour toutes les communes de l&apos;agglomération.
+                Travail soigné et professionnel. Serruriers expérimentés et équipés.
               </p>
             </div>
             <div className="text-center">

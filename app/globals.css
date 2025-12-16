@@ -44,60 +44,78 @@
     max-width: 1280px;
   }
 
-  /* Bouton principal */
+  /* ═══════════════════════════════════════════════════════════════════════════
+   * BOUTONS - Style breton sobre et affirmé
+   * ═══════════════════════════════════════════════════════════════════════════ */
+  
+  /* Bouton principal - coins légèrement arrondis, style affirmé */
   .btn-primary {
     @apply inline-flex items-center justify-center 
-           rounded-full bg-primary-600 px-6 py-3 
-           text-base font-semibold text-white 
-           shadow-lg shadow-primary-600/30 
-           hover:bg-primary-700 
+           rounded-lg bg-primary-600 px-7 py-3.5 
+           text-base font-semibold text-white tracking-wide
+           shadow-md shadow-primary-900/20 
+           hover:bg-primary-700 hover:shadow-lg
            transition-all duration-200
-           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+           focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
   }
 
-  /* Bouton secondaire */
+  /* Bouton secondaire - bordure épaisse, style sobre */
   .btn-secondary {
     @apply inline-flex items-center justify-center 
-           rounded-full border-2 border-primary-600 
-           px-6 py-3 text-base font-semibold 
-           text-primary-700 bg-white
-           hover:bg-primary-50 
+           rounded-lg border-2 border-primary-600 
+           px-7 py-3.5 text-base font-semibold tracking-wide
+           text-primary-600 bg-white
+           hover:bg-primary-50 hover:border-primary-700 hover:text-primary-700
            transition-all duration-200;
   }
 
-  /* Bouton téléphone (vert urgence) */
+  /* Bouton téléphone (accent bleu clair) - style cohérent */
   .btn-phone {
     @apply inline-flex items-center justify-center 
-           rounded-full bg-green-600 px-6 py-3 
-           text-base font-semibold text-white 
-           shadow-lg shadow-green-600/30 
-           hover:bg-green-700 
-           transition-all duration-200
-           animate-pulse hover:animate-none;
+           rounded-lg bg-accent-500 px-7 py-3.5 
+           text-base font-semibold text-white tracking-wide
+           shadow-md shadow-accent-600/30 
+           hover:bg-accent-600 hover:shadow-lg
+           transition-all duration-200;
   }
 
-  /* Card */
+  /* ═══════════════════════════════════════════════════════════════════════════
+   * CARDS - Style épuré avec bordure subtile
+   * ═══════════════════════════════════════════════════════════════════════════ */
+  
   .card {
-    @apply bg-white rounded-2xl p-6 
-           shadow-lg border border-gray-100
-           hover:shadow-xl transition-shadow duration-300;
+    @apply bg-white rounded-xl p-6 
+           shadow-sm border border-gray-200
+           hover:shadow-md hover:border-primary-200
+           transition-all duration-300;
   }
 
-  /* Badge */
+  /* Card accentuée - avec bordure gauche colorée */
+  .card-accent {
+    @apply card border-l-4 border-l-primary-600;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+   * BADGES
+   * ═══════════════════════════════════════════════════════════════════════════ */
+  
   .badge {
     @apply inline-flex items-center px-3 py-1 
-           rounded-full text-sm font-medium;
+           rounded-md text-sm font-medium;
   }
 
   .badge-primary {
-    @apply badge bg-primary-100 text-primary-800;
+    @apply badge bg-primary-100 text-primary-700 border border-primary-200;
   }
 
   .badge-success {
-    @apply badge bg-green-100 text-green-800;
+    @apply badge bg-green-100 text-green-700 border border-green-200;
   }
 
-  /* Section */
+  /* ═══════════════════════════════════════════════════════════════════════════
+   * SECTIONS
+   * ═══════════════════════════════════════════════════════════════════════════ */
+  
   .section {
     @apply py-16 md:py-24;
   }
@@ -108,6 +126,11 @@
 
   .section-subtitle {
     @apply text-lg text-gray-600 max-w-2xl;
+  }
+
+  /* Séparateur décoratif breton */
+  .section-divider {
+    @apply w-16 h-1 bg-primary-600 rounded-full;
   }
 }
 

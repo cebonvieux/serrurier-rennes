@@ -1,55 +1,76 @@
 {
   "hero": {
-    "badge": "🔐 Serrures certifiées",
+    "badge": "🔐 Serrures certifiées A2P",
     "title": "Changement de Serrure {zone}",
-    "subtitle": "Remplacement de serrure à {zone} par des serruriers qualifiés. Serrures de toutes marques, certifiées A2P pour une sécurité optimale."
+    "subtitle": "Remplacement de serrure à {zone} par des artisans qualifiés. Serrures multipoints, toutes marques, certifiées pour une sécurité optimale."
   },
   "intro": {
-    "title": "Expert en changement de serrure à {zone}",
+    "title": "Spécialiste changement de serrure à {zone}",
     "paragraphs": [
-      "Votre serrure est usée, cassée ou vous souhaitez renforcer votre sécurité ? À {zone}, {name} remplace votre serrure par un modèle adapté à vos besoins et à votre budget.",
-      "Nous travaillons avec les meilleures marques du marché (Fichet, Vachette, Bricard, Mul-T-Lock) et proposons des serrures certifiées A2P, reconnues par les assurances pour leur résistance à l'effraction."
+      "Serrure usée, abîmée ou besoin de renforcer votre sécurité ? À {zone}, {name} procède au remplacement de votre serrure par un modèle adapté à vos attentes et à votre budget.",
+      "Nous travaillons avec les marques de référence (Fichet, Vachette, Bricard, Mul-T-Lock) et proposons des serrures certifiées A2P, reconnues par les assurances pour leur résistance aux effractions."
     ]
   },
   "situations": {
-    "title": "Quand changer votre serrure à {zone} ?",
+    "title": "Quand remplacer votre serrure à {zone} ?",
     "items": [
       {
         "icon": "🔧",
         "title": "Serrure usée",
-        "description": "Clé qui force, serrure qui grince ? Il est temps de la remplacer avant qu'elle ne vous bloque."
+        "description": "Clé qui force ou serrure qui grince ? Mieux vaut la changer avant qu'elle ne vous bloque.",
+        "image": "/images/services/changement-de-serrure-rennes-35.webp"
       },
       {
         "icon": "🏠",
-        "title": "Emménagement",
-        "description": "Vous venez d'emménager à {zone} ? Changez les serrures pour votre tranquillité."
+        "title": "Nouvel emménagement",
+        "description": "Vous venez d'arriver à {zone} ? Remplacez les serrures pour être le seul à détenir les clés.",
+        "image": "/images/services/installation-de-serrure-rennes-35.webp"
       },
       {
         "icon": "🔓",
-        "title": "Après effraction",
-        "description": "Suite à un cambriolage, le changement de serrure est indispensable et souvent couvert par l'assurance."
+        "title": "Après cambriolage",
+        "description": "Le changement de serrure après effraction est indispensable et généralement pris en charge par l'assurance.",
+        "image": "/images/services/réparation-porte-effraction-rennes-35.webp"
       },
       {
         "icon": "⬆️",
-        "title": "Mise aux normes",
-        "description": "Passage à une serrure multipoints ou A2P pour une meilleure protection."
+        "title": "Renforcement sécurité",
+        "description": "Passage à une serrure multipoints ou certifiée A2P pour une meilleure protection.",
+        "image": "/images/services/blindage-de-porte-rennes-35.webp"
       }
     ]
   },
   "advantages": {
-    "title": "Notre service changement de serrure à {zone}",
+    "title": "Notre prestation à {zone}",
     "items": [
-      "Large choix de serrures (3 à 5 points)",
-      "Marques reconnues : Fichet, Vachette, Bricard",
-      "Serrures certifiées A2P (assurance)",
+      "Large choix de serrures (3 à 7 points)",
+      "Marques de confiance : Fichet, Vachette, Bricard",
+      "Serrures certifiées A2P (conformes assurances)",
       "Pose professionnelle garantie",
       "Devis gratuit et sans engagement",
       "Intervention rapide à {zone}"
     ]
   },
+  "faq": [
+    {
+      "question": "Qui appeler pour un changement de serrure à {zone} ?",
+      "answer": "Pour un changement de serrure à {zone}, contactez SR35 au {phone}. Nos serruriers professionnels installent des serrures de toutes marques (Fichet, Vachette, Bricard) avec devis gratuit et intervention rapide."
+    },
+    {
+      "question": "Combien coûte un changement de serrure à {zone} ?",
+      "answer": "Le prix dépend du type de serrure : à partir de 150€ pour une serrure standard, de 250€ à 600€ pour une serrure multipoints A2P. Devis gratuit fourni avant intervention."
+    },
+    {
+      "question": "Quelle serrure choisir pour ma porte d'entrée ?",
+      "answer": "Nous recommandons une serrure multipoints (3 à 5 points) certifiée A2P pour les portes d'entrée. La certification A2P est exigée par la plupart des assurances en cas de cambriolage."
+    },
+    {
+      "question": "Proposez-vous des serrures de marque ?",
+      "answer": "Oui, SR35 travaille avec les grandes marques : Fichet, Vachette, Bricard, Picard, Mul-T-Lock. Nous vous conseillons le modèle adapté à votre porte et votre budget."
+    }
+  ],
   "cta": {
-    "title": "Besoin de changer votre serrure à {zone} ?",
-    "subtitle": "Demandez un devis gratuit pour le remplacement de votre serrure."
+    "title": "Changement de serrure à {zone} ?",
+    "subtitle": "Demandez votre devis gratuit dès maintenant."
   }
 }
-
