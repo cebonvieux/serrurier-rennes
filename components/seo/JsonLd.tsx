@@ -103,7 +103,7 @@ export function JsonLd({ type = "LocalBusiness", service, zone, faqItems }: Json
       : null;
 
   // Combiner les schemas selon le type
-  const schemas = [localBusinessSchema];
+  const schemas: Record<string, unknown>[] = [localBusinessSchema];
   if (serviceSchema) schemas.push(serviceSchema);
   if (faqSchema) schemas.push(faqSchema);
 
