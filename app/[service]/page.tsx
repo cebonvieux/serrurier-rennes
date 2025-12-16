@@ -32,9 +32,10 @@ interface Props {
 }
 
 // Générer les pages statiques pour chaque service
+// Exclure "depannage" car il a sa propre page dédiée dans app/depannage/
 export function generateStaticParams() {
   return services
-    .filter(service => service.hasPage)
+    .filter(service => service.hasPage && service.slug !== "depannage")
     .map((service) => ({
       service: service.slug,
     }));
