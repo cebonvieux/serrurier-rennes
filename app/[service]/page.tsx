@@ -6,6 +6,7 @@ import { siteConfig, zones, services } from "@/config/site";
 import { getPageContent, getServiceBySlug } from "@/lib/content";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { ServicePresentation } from "@/components/sections/ServicePresentation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import faqData from "@/content/faq.json";
 
@@ -142,17 +143,15 @@ export default function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="section bg-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto prose prose-lg">
-            <h2>{content.intro.title}</h2>
-            {content.intro.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Présentation SEO avec image */}
+      {content.presentation && (
+        <ServicePresentation
+          title={content.presentation.title}
+          paragraphs={content.presentation.paragraphs}
+          image={content.presentation.image}
+          imageAlt={content.presentation.imageAlt}
+        />
+      )}
 
       {/* Situations / Types d'intervention avec images */}
       <section className="section bg-gradient-to-r from-white via-slate-100 to-slate-300">

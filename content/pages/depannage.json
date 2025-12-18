@@ -2,7 +2,17 @@
   "hero": {
     "badge": "🚨 Dépannage Urgence Rennes",
     "title": "Dépannage Serrurier {city}",
-    "subtitle": "Bloqué devant votre porte ? Serrure cassée ? Victime d'effraction ? Nos serruriers rennais interviennent en 30 minutes, de jour comme de nuit, partout dans la métropole."
+    "subtitle": "Bloqué devant votre porte ? Serrure cassée ? Victime d'effraction ? Nos serruriers rennais interviennent rapidement, de jour comme de nuit, partout dans la métropole."
+  },
+  "presentation": {
+    "title": "Serrurier dépanneur à Rennes : intervention express 24h/24",
+    "image": "/images/gallery/serrurier-rennes-sr35-bretagne.webp",
+    "imageAlt": "Serrurier dépannage urgence Rennes Bretagne",
+    "paragraphs": [
+      "Besoin d'un <strong>dépannage serrurerie en urgence à Rennes</strong> ? Notre équipe d'artisans bretons intervient rapidement sur l'ensemble de la métropole rennaise et du département 35. Porte claquée, serrure bloquée, perte de clés ou effraction : nous traitons chaque situation avec réactivité et professionnalisme.",
+      "Nos <strong>serruriers qualifiés</strong> connaissent parfaitement Rennes et ses quartiers : Villejean, Thabor, Beaulieu, Cleunay, Le Blosne, centre-ville... Grâce à notre implantation locale, nous <strong>intervenons rapidement</strong>, de jour comme de nuit.",
+      "Nous intervenons également à Cesson-Sévigné, Saint-Grégoire, Bruz, Chantepie, Betton, Pacé, Saint-Jacques-de-la-Lande et dans toutes les communes de l'Ille-et-Vilaine. <strong>Tarif fixé avant déplacement</strong>, artisans assurés et intervention garantie."
+    ]
   },
   "stats": [
     { "value": "30", "label": "min sur place" },
@@ -49,6 +59,6 @@
   ],
   "cta": {
     "title": "Urgence serrurerie à {city} ?",
-    "subtitle": "Nos artisans interviennent en 30 minutes, 24h/24, dans toute la métropole rennaise"
+    "subtitle": "Nos artisans interviennent rapidement, 24h/24, dans toute la métropole rennaise"
   }
 }

@@ -13,7 +13,7 @@ export function Zones({
   subtitle,
   limit = 12,
 }: ZonesProps) {
-  const defaultSubtitle = `Nous intervenons à ${siteConfig.city} et dans toute l'agglomération. Intervention rapide en 30 minutes.`;
+  const defaultSubtitle = `Nous intervenons à ${siteConfig.city} et dans toute l'agglomération. Intervention rapide.`;
   const displayedZones = zones.slice(0, limit);
 
   return (

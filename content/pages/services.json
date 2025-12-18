@@ -12,7 +12,7 @@
     {
       "icon": "🔓",
       "title": "Dépannage Urgence 24h/24",
-      "description": "Porte claquée, clé cassée, serrure bloquée ? Notre équipe intervient en 30 minutes à {city} et ses environs. Disponibles jour et nuit, week-ends et jours fériés, nous assurons une prise en charge immédiate de votre situation.",
+      "description": "Porte claquée, clé cassée, serrure bloquée ? Notre équipe intervient rapidement à {city} et ses environs. Disponibles jour et nuit, week-ends et jours fériés, nous assurons une prise en charge immédiate de votre situation.",
       "features": ["Arrivée en 30 min", "Ouverture sans dégât", "Intervention 24h/24"],
       "link": "/depannage"
     },
@@ -59,7 +59,7 @@
       {
         "icon": "⚡",
         "title": "Réactivité",
-        "description": "Intervention en 30 minutes sur {city} et l'ensemble de la métropole rennaise."
+        "description": "Intervention rapide sur {city} et l'ensemble de la métropole rennaise."
       },
       {
         "icon": "🏅",

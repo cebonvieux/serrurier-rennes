@@ -2,7 +2,17 @@
   "hero": {
     "badge": "🚪 Ouverture sans dégât",
     "title": "Ouverture de Porte {zone}",
-    "subtitle": "Porte claquée, bloquée ou clés égarées à {zone} ? Nos serruriers ouvrent votre porte en 30 minutes, sans abîmer ni la serrure ni l'huisserie."
+    "subtitle": "Porte claquée, bloquée ou clés égarées à {zone} ? Nos serruriers ouvrent votre porte rapidement, sans abîmer ni la serrure ni l'huisserie."
+  },
+  "presentation": {
+    "title": "Serrurier pour ouverture de porte à {zone} et alentours",
+    "image": "/images/services/ouverture-de-porte-rennes-35.webp",
+    "imageAlt": "Ouverture de porte par serrurier à {zone}",
+    "paragraphs": [
+      "Vous êtes <strong>bloqué devant votre domicile</strong> à {zone}, Cesson-Sévigné, Saint-Grégoire ou Bruz ? Notre service d'<strong>ouverture de porte en Ille-et-Vilaine</strong> intervient rapidement pour vous permettre de retrouver l'accès à votre logement.",
+      "Nos <strong>serruriers bretons</strong> maîtrisent les techniques d'ouverture fine : crochetage, by-pass, décodage. Résultat : votre serrure reste intacte dans <strong>95% des interventions</strong>. Que vous habitiez près du centre-ville de Rennes, à Villejean, au Thabor ou en périphérie, nous intervenons rapidement.",
+      "Appartement, maison, local commercial : nous intervenons sur tous types de portes (bois, PVC, blindées) équipées de serrures standards ou multipoints. <strong>Devis gratuit</strong> et tarif fixé avant déplacement."
+    ]
   },
   "intro": {
     "title": "Expert ouverture de porte à {zone}",
@@ -54,7 +64,7 @@
   "faq": [
     {
       "question": "Qui appeler pour une ouverture de porte à {zone} ?",
-      "answer": "Pour une ouverture de porte à {zone}, appelez SR35 au {phone}. Nos serruriers professionnels interviennent en 30 minutes pour ouvrir votre porte sans dégât, 24h/24 et 7j/7."
+      "answer": "Pour une ouverture de porte à {zone}, appelez SR35 au {phone}. Nos serruriers professionnels interviennent rapidement pour ouvrir votre porte sans dégât, 24h/24 et 7j/7."
     },
     {
       "question": "L'ouverture de porte abîme-t-elle ma serrure ?",

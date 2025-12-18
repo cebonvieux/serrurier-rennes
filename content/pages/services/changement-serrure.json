@@ -4,6 +4,16 @@
     "title": "Changement de Serrure {zone}",
     "subtitle": "Remplacement de serrure à {zone} par des artisans qualifiés. Serrures multipoints, toutes marques, certifiées pour une sécurité optimale."
   },
+  "presentation": {
+    "title": "Remplacement de serrure dans la métropole rennaise",
+    "image": "/images/services/changement-de-serrure-rennes-35.webp",
+    "imageAlt": "Changement de serrure à {zone} par serrurier professionnel",
+    "paragraphs": [
+      "Votre <strong>serrure montre des signes de faiblesse</strong> ? Clé qui force, mécanisme grippé ou simple envie de renforcer la sécurité de votre entrée : nos <strong>artisans serruriers à Rennes</strong> remplacent votre équipement par une serrure neuve et fiable.",
+      "Nous installons des <strong>serrures multipoints certifiées A2P</strong> (3, 5 ou 7 points de fermeture) des marques Fichet, Vachette, Bricard et Mul-T-Lock. Ces références sont reconnues par les assurances et offrent une <strong>résistance optimale contre les effractions</strong>.",
+      "Intervention possible à {zone}, Chantepie, Pacé, Betton, Saint-Jacques-de-la-Lande et dans tout le département 35. <strong>Pose soignée</strong> avec réglage précis, remise des clés et explications sur l'entretien de votre nouvelle serrure."
+    ]
+  },
   "intro": {
     "title": "Spécialiste changement de serrure à {zone}",
     "paragraphs": [

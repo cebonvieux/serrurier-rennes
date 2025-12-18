@@ -4,6 +4,16 @@
     "title": "Installation de Serrure {city}",
     "subtitle": "Protégez votre logement rennais avec des serrures haute sécurité. Installation, remplacement de cylindre, blindage de porte. Devis gratuit, intervention rapide."
   },
+  "presentation": {
+    "title": "Installation et pose de serrures à Rennes",
+    "image": "/images/services/installation-de-serrure-rennes-35.webp",
+    "imageAlt": "Installation de serrure haute sécurité à Rennes",
+    "paragraphs": [
+      "Vous recherchez un <strong>serrurier pour installer une serrure</strong> à Rennes ou dans la métropole ? Notre équipe d'artisans bretons pose tous types de serrures : <strong>multipoints, haute sécurité, connectées</strong> et blindées.",
+      "Nous travaillons avec les <strong>grandes marques de serrurerie</strong> : Fichet, Vachette, Bricard, Picard, Mul-T-Lock. Chaque installation respecte les normes en vigueur et bénéficie d'une <strong>garantie constructeur</strong>. Nos serrures certifiées A2P sont reconnues par les assurances.",
+      "Intervention sur rendez-vous à Rennes, Cesson-Sévigné, Saint-Grégoire, Bruz, Chantepie, Betton et dans tout le département 35. <strong>Devis gratuit</strong> et conseils personnalisés pour choisir l'équipement adapté à votre porte et vos besoins de sécurité."
+    ]
+  },
   "certifications": [
     { "icon": "🛡️", "label": "Serrures A2P" },
     { "icon": "✅", "label": "Garantie 2 ans" },

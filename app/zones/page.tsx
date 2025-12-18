@@ -41,7 +41,7 @@ export default function ZonesPage() {
           </h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Notre équipe intervient dans tout {siteConfig.city} et son agglomération.
-            Intervention rapide en 30 minutes.
+            Intervention rapide.
           </p>
         </div>
       </section>
@@ -91,7 +91,7 @@ export default function ZonesPage() {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Intervention rapide</h3>
               <p className="text-gray-600 text-sm">
-                Nos serruriers arrivent en 30 minutes en moyenne sur toutes les communes listées.
+                Nos serruriers interviennent rapidement sur toutes les communes listées.
               </p>
             </div>
             <div className="text-center">

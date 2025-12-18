@@ -4,6 +4,16 @@
     "title": "Installation Serrure {zone}",
     "subtitle": "Installation de serrures neuves à {zone} par des artisans expérimentés. Serrures multipoints, connectées ou blindées pour sécuriser votre domicile."
   },
+  "presentation": {
+    "title": "Pose de serrure neuve en Ille-et-Vilaine",
+    "image": "/images/services/installation-de-serrure-rennes-35.webp",
+    "imageAlt": "Installation de serrure à {zone}",
+    "paragraphs": [
+      "Vous faites construire, rénovez votre logement ou souhaitez <strong>équiper une nouvelle porte</strong> ? Nos serruriers assurent l'<strong>installation de serrures</strong> de qualité sur {zone} et l'ensemble de la Bretagne.",
+      "Nous posons tous types de serrures : <strong>multipoints</strong> (3, 5 ou 7 points), <strong>serrures connectées</strong> (Nuki, Yale, Somfy) pour le contrôle à distance, et serrures blindées pour une sécurité maximale. Chaque installation est réalisée dans les règles de l'art avec réglage précis.",
+      "Service disponible sur rendez-vous à {zone}, Montgermont, La Chapelle-des-Fougeretz, Pont-Péan, Gévezé et partout dans le 35. <strong>Conseils personnalisés</strong> pour choisir la serrure adaptée à votre porte et vos besoins de sécurité."
+    ]
+  },
   "intro": {
     "title": "Pose de serrure à {zone}",
     "paragraphs": [

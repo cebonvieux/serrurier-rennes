@@ -2,7 +2,7 @@
   "hero": {
     "badge": "🚨 Dépannage Urgence {zone}",
     "title": "Dépannage Serrurier {zone}",
-    "subtitle": "Bloqué devant votre porte ? Serrure cassée ? Victime d'effraction ? Nos serruriers interviennent en 30 minutes à {zone}, de jour comme de nuit."
+    "subtitle": "Bloqué devant votre porte ? Serrure cassée ? Victime d'effraction ? Nos serruriers interviennent rapidement à {zone}, de jour comme de nuit."
   },
   "stats": [
     { "value": "30", "label": "min sur place" },
@@ -49,7 +49,7 @@
   ],
   "cta": {
     "title": "Urgence serrurerie à {zone} ?",
-    "subtitle": "Nos artisans interviennent en 30 minutes, 24h/24, à {zone} et ses environs"
+    "subtitle": "Nos artisans interviennent rapidement, 24h/24, à {zone} et ses environs"
   }
 }
 

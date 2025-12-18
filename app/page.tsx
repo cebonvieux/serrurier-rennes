@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { VideoPresentation } from "@/components/sections/VideoPresentation";
 import { Services } from "@/components/sections/Services";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Zones } from "@/components/sections/Zones";
@@ -20,6 +21,9 @@ export default function HomePage() {
     <main>
       {/* Hero Section */}
       <Hero />
+
+      {/* Présentation vidéo + texte SEO */}
+      <VideoPresentation />
 
       {/* Services */}
       <Services />

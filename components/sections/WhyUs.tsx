@@ -68,24 +68,12 @@ export function WhyUs({
               {displaySubtitle}
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-4 text-gray-700 leading-relaxed bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/80">
               {displayAdvantages.map((advantage, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/80 shadow-sm hover:shadow-md hover:bg-white hover:border-primary-200 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-primary-50/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border border-primary-100">
-                    {advantage.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">
-                      {advantage.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {advantage.description}
-                    </p>
-                  </div>
-                </div>
+                <p key={index}>
+                  <strong className="text-gray-900">{advantage.title} :</strong>{" "}
+                  {advantage.description}
+                </p>
               ))}
             </div>
           </div>

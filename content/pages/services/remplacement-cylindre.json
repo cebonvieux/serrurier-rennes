@@ -4,6 +4,16 @@
     "title": "Remplacement de Cylindre {zone}",
     "subtitle": "Changement de cylindre à {zone} par des professionnels. Cylindres anti-crochetage, anti-perçage et anti-bumping pour une sécurité accrue."
   },
+  "presentation": {
+    "title": "Changement de cylindre et barillet à {zone}",
+    "image": "/images/services/changement-de-cylindre-serrurerie-rennes-35.webp",
+    "imageAlt": "Remplacement de cylindre de serrure à {zone}",
+    "paragraphs": [
+      "Le <strong>cylindre de serrure</strong> (ou barillet) est la pièce qui reçoit votre clé. Son remplacement suffit souvent à <strong>sécuriser votre porte</strong> sans changer l'intégralité de la serrure. Solution rapide et économique, idéale après une perte de clés ou un emménagement.",
+      "Nos serruriers installent des <strong>cylindres haute sécurité</strong> dotés de protections anti-crochetage, anti-perçage et anti-bumping. Les marques Vachette, Bricard et Mul-T-Lock offrent également une <strong>carte de propriété</strong> pour contrôler la reproduction des clés.",
+      "Intervention en 15 minutes sur {zone}, Vern-sur-Seiche, Thorigné-Fouillard, Acigné, Noyal-sur-Vilaine et l'ensemble du bassin rennais. <strong>Cylindres compatibles</strong> avec toutes les serrures : encastrées, en applique, multipoints."
+    ]
+  },
   "intro": {
     "title": "Expert cylindre de serrure à {zone}",
     "paragraphs": [

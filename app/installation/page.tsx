@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { getPageContent } from "@/lib/content";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { ServicePresentation } from "@/components/sections/ServicePresentation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import faqData from "@/content/faq.json";
 import pageData from "@/content/pages/installation.json";
@@ -82,6 +83,16 @@ export default function InstallationPage() {
           </div>
         </div>
       </section>
+
+      {/* Présentation SEO avec image */}
+      {content.presentation && (
+        <ServicePresentation
+          title={content.presentation.title}
+          paragraphs={content.presentation.paragraphs}
+          image={content.presentation.image}
+          imageAlt={content.presentation.imageAlt}
+        />
+      )}
 
       {/* Services Installation */}
       <section className="section bg-gradient-to-r from-white via-slate-100 to-slate-300">

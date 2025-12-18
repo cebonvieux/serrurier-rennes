@@ -1,7 +1,7 @@
 [
   {
     "question": "En combien de temps intervenez-vous à {zone} ?",
-    "answer": "Notre équipe arrive en <strong>30 minutes en moyenne</strong> partout à {zone} et dans la métropole. Nous sommes disponibles <strong>24h/24 et 7j/7</strong>, week-ends et jours fériés compris."
+    "answer": "Notre équipe intervient <strong>rapidement</strong> partout à {zone} et dans la métropole. Nous sommes disponibles <strong>24h/24 et 7j/7</strong>, week-ends et jours fériés compris."
   },
   {
     "question": "Quel est le tarif pour ouvrir une porte claquée à {zone} ?",
@@ -73,7 +73,7 @@
   },
   {
     "question": "Peut-on installer un cylindre haute sécurité sur une ancienne serrure ?",
-    "answer": "Oui, c'est même la solution la plus économique pour renforcer votre sécurité. Un <strong>cylindre européen haute sécurité</strong> peut remplacer votre cylindre actuel si votre serrure est compatible (format standard). Installation rapide en 30 minutes, à partir de 89€."
+    "answer": "Oui, c'est même la solution la plus économique pour renforcer votre sécurité. Un <strong>cylindre européen haute sécurité</strong> peut remplacer votre cylindre actuel si votre serrure est compatible (format standard). Installation rapide, à partir de 89€."
   },
   {
     "question": "Quelle garantie sur l'installation d'une serrure ?",

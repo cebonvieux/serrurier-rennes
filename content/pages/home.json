@@ -3,7 +3,7 @@
     "badge": "⚡ Disponible en Bretagne 24h/24",
     "title": "Serrurier {city} 35",
     "subtitle": "Dépannage, ouverture de porte, changement de serrure. Service disponible 24h/24, 7j/7.",
-    "subtitleSecondary": "Votre artisan serrurier intervient en 30 minutes à {city} et dans toute la métropole rennaise."
+    "subtitleSecondary": "Votre artisan serrurier intervient rapidement à {city} et dans toute la métropole rennaise."
   },
   "trustBadges": [
     {
@@ -23,28 +23,28 @@
     }
   ],
   "whyUs": {
-    "title": "Votre serrurier de confiance à {city}",
-    "subtitle": "{name} accompagne les habitants de {city} et de la métropole rennaise depuis plus de 10 ans. Une équipe locale, réactive et professionnelle.",
+    "title": "Dépannage serrurerie à {city} et en Ille-et-Vilaine",
+    "subtitle": "Spécialistes de l'ouverture de porte, du changement de serrure et du blindage dans le département 35. Intervention rapide pour particuliers et professionnels sur {city}, Cesson-Sévigné, Bruz, Saint-Malo et toute la Bretagne.",
     "advantages": [
       {
         "icon": "⚡",
-        "title": "Rapidité d'intervention",
-        "description": "Présent sur place en 30 minutes dans tout {city}, de Villejean au Thabor, de Beaulieu à Cleunay."
+        "title": "Serrurier urgence {city}",
+        "description": "Déblocage de porte et dépannage express en 30 min. Quartiers desservis : Villejean, Thabor, Beaulieu, Cleunay, centre-ville et périphérie."
       },
       {
         "icon": "🛡️",
-        "title": "Garantie totale",
-        "description": "Chaque intervention est couverte par notre assurance professionnelle. Travail soigné et durable."
+        "title": "Pose de serrures haute sécurité",
+        "description": "Installation de cylindres A2P, verrous multipoints et blindage de porte. Protection anti-effraction certifiée pour votre domicile ou commerce."
       },
       {
         "icon": "💰",
-        "title": "Tarifs clairs",
-        "description": "Devis gratuit communiqué avant intervention. Prix fixe annoncé avant déplacement, sans mauvaise surprise."
+        "title": "Devis gratuit et prix fixes",
+        "description": "Tarif communiqué avant toute intervention de serrurerie. Pas de frais cachés, transparence totale sur le coût du dépannage."
       },
       {
         "icon": "🏆",
-        "title": "Savoir-faire breton",
-        "description": "Artisans serruriers qualifiés, formés aux dernières techniques. Connaissance parfaite du terrain rennais."
+        "title": "Artisan serrurier qualifié 35",
+        "description": "Techniciens formés à l'ouverture fine et aux serrures connectées. Expertise reconnue sur Rennes Métropole et l'ensemble du département."
       }
     ]
   }

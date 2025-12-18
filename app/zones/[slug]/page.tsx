@@ -62,7 +62,7 @@ export default function ZonePage({ params }: Props) {
       <Hero
         badge={`📍 Serrurier ${zone.name}`}
         title={`Serrurier ${zone.name}`}
-        subtitle={`Intervention rapide en 30 minutes à ${zone.name} (${zone.postalCode}). Dépannage, ouverture de porte, changement de serrure. Disponible 24h/24.`}
+        subtitle={`Intervention rapide à ${zone.name} (${zone.postalCode}). Dépannage, ouverture de porte, changement de serrure. Disponible 24h/24.`}
       />
 
       {/* Services avec liens vers la zone */}
@@ -89,7 +89,7 @@ export default function ZonePage({ params }: Props) {
             </p>
             <h3>Pourquoi choisir {siteConfig.name} à {zone.name} ?</h3>
             <ul>
-              <li><strong>Intervention en 30 minutes</strong> sur {zone.name}</li>
+              <li><strong>Intervention rapide</strong> sur {zone.name}</li>
               <li><strong>Disponible 24h/24</strong>, y compris week-ends et jours fériés</li>
               <li><strong>Devis gratuit</strong> communiqué avant intervention</li>
               <li><strong>Prix transparents</strong>, pas de mauvaise surprise</li>
