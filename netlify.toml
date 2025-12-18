@@ -6,9 +6,125 @@
   publish = "out"
   command = "npm run build"
 
+# ═══════════════════════════════════════════════════════════════
+# CACHE - Ressources statiques Next.js (_next/static)
+# ═══════════════════════════════════════════════════════════════
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/_next/static/**"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/_next/static/**/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+# ═══════════════════════════════════════════════════════════════
+# CACHE - Dossier images (tous les sous-dossiers)
+# ═══════════════════════════════════════════════════════════════
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/**"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/**/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+# Sous-dossiers spécifiques images
+[[headers]]
+  for = "/images/backgrounds/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/services/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/gallery/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/hero/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/team/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/images/zones/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+# ═══════════════════════════════════════════════════════════════
+# CACHE - Extensions fichiers (tous niveaux)
+# ═══════════════════════════════════════════════════════════════
+
 # Images WebP
 [[headers]]
   for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/**/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -23,7 +139,21 @@
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
+  for = "/**/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
   for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/**/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -37,9 +167,23 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
+[[headers]]
+  for = "/**/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
 # Images GIF
 [[headers]]
   for = "/*.gif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/**/*.gif"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -53,6 +197,13 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
+[[headers]]
+  for = "/**/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
 # Favicon
 [[headers]]
   for = "/*.ico"
@@ -61,9 +212,8 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
-# Dossier images
 [[headers]]
-  for = "/images/*"
+  for = "/**/*.ico"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -77,6 +227,13 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
+[[headers]]
+  for = "/**/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
 # JavaScript
 [[headers]]
   for = "/*.js"
@@ -85,9 +242,8 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
-# Next.js static assets
 [[headers]]
-  for = "/_next/static/*"
+  for = "/**/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -101,9 +257,23 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
+[[headers]]
+  for = "/**/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
 # Fonts WOFF
 [[headers]]
   for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/**/*.woff"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Vary = "Accept-Encoding"
@@ -117,11 +287,19 @@
     Vary = "Accept-Encoding"
     X-Content-Type-Options = "nosniff"
 
-# Sécurité globale
+[[headers]]
+  for = "/**/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Vary = "Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+
+# ═══════════════════════════════════════════════════════════════
+# SÉCURITÉ - Headers globaux
+# ═══════════════════════════════════════════════════════════════
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-
