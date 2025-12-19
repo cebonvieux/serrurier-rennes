@@ -20,11 +20,10 @@ const nextConfig = {
   // Strict mode
   reactStrictMode: true,
 
-  // Optimisations expérimentales
-  // Note: optimizeCss nécessite le module 'critters' (npm install critters)
-  // experimental: {
-  //   optimizeCss: true,
-  // },
+  // Optimisations expérimentales - Critters pour inliner les CSS critiques
+  experimental: {
+    optimizeCss: true,
+  },
 
   // Minification SWC
   swcMinify: true,
