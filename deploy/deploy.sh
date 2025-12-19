@@ -100,12 +100,12 @@ log_info "Étape 2/4 : Upload des fichiers vers ${VPS_HOST}..."
 # Créer le dossier sur le VPS si nécessaire
 ssh ${VPS_USER}@${VPS_HOST} "mkdir -p ${VPS_PATH}"
 
-# Synchroniser les fichiers
+# Synchroniser les fichiers (directement dans le dossier racine, pas dans /out/)
 rsync -avz --delete \
     --exclude '.git' \
     --exclude 'node_modules' \
     --exclude '.next' \
-    out/ ${VPS_USER}@${VPS_HOST}:${VPS_PATH}/out/
+    out/ ${VPS_USER}@${VPS_HOST}:${VPS_PATH}/
 
 log_success "Upload terminé"
 
