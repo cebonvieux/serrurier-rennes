@@ -27,8 +27,10 @@ export default function ZonesPage() {
             src="/images/backgrounds/serrurier-rennes-centre-bretagne.webp"
             alt="Rennes centre-ville Bretagne"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50" />
         </div>

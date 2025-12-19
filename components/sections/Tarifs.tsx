@@ -31,7 +31,9 @@ export function Tarifs({
           src="/images/backgrounds/serrurier-rennes-bretagne-pas-cher.webp"
           alt="Tarifs serrurier Rennes"
           fill
+          sizes="100vw"
           className="object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-white/100" />
       </div>

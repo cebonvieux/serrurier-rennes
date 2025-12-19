@@ -36,7 +36,9 @@ export function WhyUs({
           src="/images/backgrounds/serrurier-rennes-bretagne-pas-cher.webp"
           alt="Serrurier Rennes"
           fill
+          sizes="100vw"
           className="object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-white/40" />
       </div>
@@ -50,7 +52,9 @@ export function WhyUs({
                 src="/images/gallery/serrurier-rennes-sr35-bretagne.webp"
                 alt={`Serrurier professionnel ${siteConfig.city}`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             {/* Badge superposé */}

@@ -32,8 +32,10 @@ export function Hero({
           src="/images/backgrounds/serrurier-rennes-35-centre.webp"
           alt="Rennes centre-ville"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         {/* Overlay pour lisibilité du texte - opacité augmentée */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50 md:from-primary-600/80 md:via-primary-500/60 md:to-primary-400/30" />

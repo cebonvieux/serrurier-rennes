@@ -28,8 +28,10 @@ export default function TarifsPage() {
             src="/images/backgrounds/interventions-serrurerie-rennes-35.webp"
             alt="Tarifs serrurier Rennes"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-600/80 via-primary-500/60 to-primary-400/30" />
         </div>

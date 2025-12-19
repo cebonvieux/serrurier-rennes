@@ -111,8 +111,10 @@ export default function ServicePage({ params }: Props) {
             src={service.bgImage || "/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"}
             alt={service.name}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50" />
         </div>
@@ -168,7 +170,9 @@ export default function ServicePage({ params }: Props) {
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/85 transition-all duration-300" />
                   </>
@@ -279,7 +283,9 @@ export default function ServicePage({ params }: Props) {
                     src={s.bgImage || "/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"}
                     alt={s.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/85 transition-all duration-300" />
                   

@@ -24,7 +24,9 @@ export function Zones({
           src="/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"
           alt="Zones intervention serrurier Rennes"
           fill
+          sizes="100vw"
           className="object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-slate-900/80" />
       </div>

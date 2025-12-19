@@ -90,8 +90,10 @@ export default function InstallationZonePage({ params }: Props) {
             src="/images/services/changement-de-serrure-rennes-35.webp"
             alt={`Installation de serrure ${zone.name}`}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50 md:from-primary-600/80 md:via-primary-500/60 md:to-primary-400/30" />
         </div>
@@ -161,7 +163,9 @@ export default function InstallationZonePage({ params }: Props) {
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/85 transition-all duration-300" />
                 
@@ -208,7 +212,9 @@ export default function InstallationZonePage({ params }: Props) {
                     src={brand.image}
                     alt={`Serrures ${brand.name}`}
                     fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <p className="font-bold text-gray-900 text-center">{brand.name}</p>

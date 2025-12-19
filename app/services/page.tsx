@@ -32,8 +32,10 @@ export default function ServicesPage() {
             src="/images/backgrounds/interventions-serrurerie-rennes-35.webp"
             alt="Services serrurerie Rennes"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-700/90 via-primary-600/75 to-primary-500/50" />
         </div>
@@ -109,7 +111,9 @@ export default function ServicesPage() {
                       src={bgImage}
                       alt={service.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
@@ -185,7 +189,9 @@ export default function ServicesPage() {
             src="/images/backgrounds/serrurier-rennes-centre-bretagne.webp"
             alt="Serrurier Rennes"
             fill
+            sizes="100vw"
             className="object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-primary-900/85" />
         </div>

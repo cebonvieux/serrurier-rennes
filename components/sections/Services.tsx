@@ -31,7 +31,9 @@ export function Services({
           src="/images/backgrounds/serrurier-rennes-rapide-pas-cher.webp"
           alt="Services serrurerie Rennes"
           fill
+          sizes="100vw"
           className="object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-slate-900/80" />
       </div>
@@ -61,7 +63,9 @@ export function Services({
                       src={service.bgImage as string}
                       alt={service.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 group-hover:from-black/80 transition-all duration-300" />
                   </>
