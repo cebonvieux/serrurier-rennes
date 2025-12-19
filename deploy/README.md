@@ -1,102 +1,148 @@
-# 🚀 Guide de Déploiement
+# 🚀 Guide de Déploiement - Serrurier Template
 
-## Prérequis sur le VPS
+## Prérequis
 
-- Ubuntu 20.04+ ou Debian 11+
-- Nginx installé : `sudo apt install nginx`
-- Accès SSH avec clé
+- Un VPS avec Nginx installé
+- Accès SSH au serveur
+- Domaine pointant vers l'IP du VPS
 
-## Déploiement rapide
+## Déploiement Rapide
 
 ### 1. Configurer le script
 
-Éditer `deploy/deploy.sh` et modifier :
+Éditez `deploy/deploy.sh` et modifiez ces variables :
 
 ```bash
-DOMAIN="serrurier-votre-ville.fr"     # Votre domaine
-VPS_USER="root"                        # Utilisateur SSH
-VPS_HOST="123.456.789.0"              # IP de votre VPS
+DOMAIN="serrurier-rennes35.fr"    # Votre domaine
+VPS_USER="root"                    # Utilisateur SSH
+VPS_HOST="123.456.789.0"          # IP du VPS
 ```
 
-### 2. Rendre le script exécutable
+### 2. Optimiser les images (IMPORTANT !)
+
+Avant chaque déploiement, optimisez les images :
 
 ```bash
-chmod +x deploy/deploy.sh
+node scripts/optimize-images.js
 ```
+
+Cela réduit drastiquement la taille des images (ex: 70 MB → 1 MB).
 
 ### 3. Déployer
 
 ```bash
+chmod +x deploy/deploy.sh
 ./deploy/deploy.sh
 ```
 
-## Configuration Nginx manuelle
+Le script va automatiquement :
+1. ✅ Build le site Next.js
+2. ✅ Upload les fichiers sur le VPS
+3. ✅ Configurer Nginx avec cache optimisé
+4. ✅ Recharger Nginx
 
-Si c'est le premier déploiement :
+## Configuration SSL (HTTPS)
 
-### 1. Copier la config Nginx sur le VPS
-
-```bash
-scp deploy/nginx.conf root@VOTRE_IP:/etc/nginx/sites-available/VOTRE_DOMAINE.conf
-```
-
-### 2. Modifier la config sur le VPS
+Après le premier déploiement, installez le certificat SSL :
 
 ```bash
-ssh root@VOTRE_IP
-nano /etc/nginx/sites-available/VOTRE_DOMAINE.conf
-# Remplacer tous les "DOMAIN" par votre domaine
-```
-
-### 3. Activer le site
-
-```bash
-ln -s /etc/nginx/sites-available/VOTRE_DOMAINE.conf /etc/nginx/sites-enabled/
-nginx -t
-systemctl reload nginx
-```
-
-## Installation SSL (Let's Encrypt)
-
-```bash
-# Sur le VPS
+ssh root@votre-vps
 sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d votre-domaine.fr -d www.votre-domaine.fr
 ```
 
-Certbot modifiera automatiquement la config Nginx pour HTTPS.
+## Vérifier le Cache
 
-## Vérification
-
-```bash
-# Tester la config Nginx
-nginx -t
-
-# Voir les logs
-tail -f /var/log/nginx/VOTRE_DOMAINE.access.log
-tail -f /var/log/nginx/VOTRE_DOMAINE.error.log
-```
-
-## Structure sur le VPS
-
-```
-/var/www/votre-domaine.fr/
-└── out/                    # Fichiers statiques du site
-    ├── index.html
-    ├── depannage/
-    ├── installation/
-    ├── tarifs/
-    ├── zones/
-    ├── contact/
-    └── _next/              # Assets Next.js
-```
-
-## Renouvellement SSL automatique
-
-Certbot configure automatiquement un cron pour renouveler les certificats.
-Vérifier avec :
+Pour vérifier que le cache est bien appliqué :
 
 ```bash
-sudo certbot renew --dry-run
+curl -I https://votre-domaine.fr/images/logos/votre-logo.webp
 ```
 
+Vous devez voir :
+```
+Cache-Control: public, max-age=31536000, immutable
+```
+
+## Problèmes PageSpeed - Solutions
+
+### ❌ "Utiliser des durées de mise en cache efficaces"
+
+**Cause** : Le serveur ne renvoie pas les headers de cache.
+
+**Solution** : S'assurer que :
+1. La configuration Nginx est correctement appliquée
+2. Nginx est rechargé après modification
+
+```bash
+# Sur le VPS
+nginx -t                    # Tester la config
+systemctl reload nginx      # Recharger
+```
+
+### ❌ Images trop lourdes
+
+**Cause** : Images originales non optimisées.
+
+**Solution** :
+```bash
+node scripts/optimize-images.js
+npm run build
+./deploy/deploy.sh
+```
+
+### ❌ YouTube Video (thumbnail) - TTL 5min
+
+C'est normal ! Les ressources tierces (YouTube) ont leur propre politique de cache.
+C'est hors de votre contrôle et PageSpeed le mentionne comme "tiers".
+
+## Structure des fichiers
+
+```
+deploy/
+├── deploy.sh      # Script de déploiement automatique
+├── nginx.conf     # Configuration Nginx (cache, gzip, SSL)
+└── README.md      # Ce fichier
+```
+
+## Dépannage
+
+### Le cache ne fonctionne toujours pas
+
+1. Vérifiez que le fichier nginx.conf est bien sur le serveur :
+```bash
+ssh root@votre-vps "cat /etc/nginx/sites-available/votre-domaine.fr.conf"
+```
+
+2. Vérifiez le lien symbolique :
+```bash
+ssh root@votre-vps "ls -la /etc/nginx/sites-enabled/"
+```
+
+3. Vérifiez les logs Nginx :
+```bash
+ssh root@votre-vps "tail -f /var/log/nginx/error.log"
+```
+
+### Les images ne se chargent pas
+
+Vérifiez les permissions :
+```bash
+ssh root@votre-vps "chown -R www-data:www-data /var/www/votre-domaine.fr"
+```
+
+## Maintenance
+
+### Mettre à jour le site
+
+```bash
+# Modifier vos fichiers localement
+npm run build
+./deploy/deploy.sh
+```
+
+### Renouveler SSL (automatique normalement)
+
+```bash
+ssh root@votre-vps "certbot renew"
+```

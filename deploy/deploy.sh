@@ -9,7 +9,7 @@
 # Ce script :
 # 1. Build le site Next.js (export statique)
 # 2. Copie les fichiers sur le VPS via rsync
-# 3. Configure Nginx si nécessaire
+# 3. Configure et applique la config Nginx avec cache optimisé
 #
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -19,10 +19,10 @@ set -e  # Arrêter en cas d'erreur
 # CONFIGURATION - À MODIFIER
 # ─────────────────────────────────────────────────────────────────────────────
 
-DOMAIN="serrurier-lille-59.fr"        # Votre domaine
+DOMAIN="serrurier-rennes35.fr"         # Votre domaine
 VPS_USER="root"                        # Utilisateur SSH du VPS
-VPS_HOST="123.456.789.0"              # IP ou hostname du VPS
-VPS_PATH="/var/www/${DOMAIN}"         # Chemin sur le VPS
+VPS_HOST="votre-ip-ou-hostname"        # IP ou hostname du VPS
+VPS_PATH="/var/www/${DOMAIN}"          # Chemin sur le VPS
 
 # ─────────────────────────────────────────────────────────────────────────────
 # COULEURS
@@ -71,7 +71,7 @@ if [ ! -f "package.json" ]; then
 fi
 
 # Vérifier que les variables sont configurées
-if [ "$VPS_HOST" == "123.456.789.0" ]; then
+if [ "$VPS_HOST" == "votre-ip-ou-hostname" ]; then
     log_error "Veuillez configurer VPS_HOST dans ce script"
     exit 1
 fi
@@ -80,7 +80,7 @@ fi
 # ÉTAPE 1 : BUILD
 # ─────────────────────────────────────────────────────────────────────────────
 
-log_info "Étape 1/3 : Build du site..."
+log_info "Étape 1/4 : Build du site..."
 
 npm run build
 
@@ -92,10 +92,10 @@ fi
 log_success "Build terminé"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ÉTAPE 2 : UPLOAD
+# ÉTAPE 2 : UPLOAD DES FICHIERS
 # ─────────────────────────────────────────────────────────────────────────────
 
-log_info "Étape 2/3 : Upload des fichiers vers ${VPS_HOST}..."
+log_info "Étape 2/4 : Upload des fichiers vers ${VPS_HOST}..."
 
 # Créer le dossier sur le VPS si nécessaire
 ssh ${VPS_USER}@${VPS_HOST} "mkdir -p ${VPS_PATH}"
@@ -110,31 +110,43 @@ rsync -avz --delete \
 log_success "Upload terminé"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ÉTAPE 3 : CONFIGURATION NGINX (optionnel)
+# ÉTAPE 3 : CONFIGURATION NGINX
 # ─────────────────────────────────────────────────────────────────────────────
 
-log_info "Étape 3/3 : Vérification de la configuration Nginx..."
+log_info "Étape 3/4 : Configuration Nginx..."
 
-# Vérifier si la config Nginx existe
 NGINX_CONFIG="/etc/nginx/sites-available/${DOMAIN}.conf"
-NGINX_EXISTS=$(ssh ${VPS_USER}@${VPS_HOST} "test -f ${NGINX_CONFIG} && echo 'yes' || echo 'no'")
+NGINX_ENABLED="/etc/nginx/sites-enabled/${DOMAIN}.conf"
 
-if [ "$NGINX_EXISTS" == "no" ]; then
-    log_warning "Configuration Nginx non trouvée"
-    echo ""
-    echo "Pour configurer Nginx :"
-    echo "1. Copiez deploy/nginx.conf sur le VPS"
-    echo "2. Remplacez DOMAIN par ${DOMAIN}"
-    echo "3. Placez le fichier dans /etc/nginx/sites-available/${DOMAIN}.conf"
-    echo "4. Créez le lien : ln -s /etc/nginx/sites-available/${DOMAIN}.conf /etc/nginx/sites-enabled/"
-    echo "5. Rechargez Nginx : systemctl reload nginx"
-    echo ""
-else
-    log_success "Configuration Nginx trouvée"
-    
+# Préparer la config Nginx avec le bon domaine
+NGINX_CONTENT=$(cat deploy/nginx.conf | sed "s/DOMAIN/${DOMAIN}/g")
+
+# Envoyer la configuration sur le serveur
+echo "$NGINX_CONTENT" | ssh ${VPS_USER}@${VPS_HOST} "cat > ${NGINX_CONFIG}"
+
+log_success "Configuration Nginx envoyée"
+
+# Créer le lien symbolique si nécessaire
+ssh ${VPS_USER}@${VPS_HOST} "ln -sf ${NGINX_CONFIG} ${NGINX_ENABLED}"
+
+log_success "Lien symbolique créé"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ÉTAPE 4 : RECHARGEMENT NGINX
+# ─────────────────────────────────────────────────────────────────────────────
+
+log_info "Étape 4/4 : Test et rechargement de Nginx..."
+
+# Tester la configuration
+ssh ${VPS_USER}@${VPS_HOST} "nginx -t"
+
+if [ $? -eq 0 ]; then
     # Recharger Nginx
-    ssh ${VPS_USER}@${VPS_HOST} "nginx -t && systemctl reload nginx"
-    log_success "Nginx rechargé"
+    ssh ${VPS_USER}@${VPS_HOST} "systemctl reload nginx"
+    log_success "Nginx rechargé avec succès"
+else
+    log_error "Erreur dans la configuration Nginx. Vérifiez les logs."
+    exit 1
 fi
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -146,6 +158,13 @@ echo "════════════════════════�
 echo -e "  ${GREEN}✓ DÉPLOIEMENT TERMINÉ${NC}"
 echo "═══════════════════════════════════════════════════════════════════════════"
 echo ""
-echo "  URL : https://${DOMAIN}"
+echo "  🌐 URL : https://${DOMAIN}"
 echo ""
-
+echo "  ℹ️  Pour SSL (si pas encore installé) :"
+echo "     ssh ${VPS_USER}@${VPS_HOST}"
+echo "     sudo certbot --nginx -d ${DOMAIN} -d www.${DOMAIN}"
+echo ""
+echo "  📊 Pour vérifier le cache :"
+echo "     curl -I https://${DOMAIN}/images/logos/serrurier-rennes35-sr35.webp"
+echo "     (Vérifier que Cache-Control contient 'max-age=31536000')"
+echo ""
